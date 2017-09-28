@@ -8,12 +8,14 @@ const knex = require("knex")(knexConfig[ENV]);
 
 const db = require('../lib/data-helpers.js')(knex);
 
-db.getPoll('qwerty')
-  .then(poll => {
-    console.log(poll);
-  });
+// db.getPoll('qwerty')
+//   .then(poll => {
+//     console.log(poll);
+//   });
 
-db.getPoll('qwerty', 'sort')
-  .then(poll => {
-    console.log(poll);
-  });
+// db.getPoll('qwerty', 'sort')
+//   .then(poll => {
+//     console.log(poll);
+//   });
+
+db.saveVote('qwerty');
