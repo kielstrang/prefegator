@@ -5,15 +5,41 @@
     <% include partials/_head.ejs%>
   </head>
   <body>
-    <div class="container starter-template">
-      <% include partials/_header.ejs%>
+    <% include partials/_header.ejs%>
+    <div class="container text-center">
       <h6> One liner for 'how to use this'</h6>
       <div class="container">
           <form action="">
-            <input type="textarea" placeholder="Decision">
-            <input type="textarea" placeholder="Email">
-            <input type="textarea" placeholder="Option">
-            <input type="textarea" placeholder="Description">
+            <div>
+              <input type="textarea" placeholder="Email">
+              <input type="textarea" placeholder="Decision">
+            </div>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Option</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+                <tr>
+                  <td>Alligator</td>
+                  <td>Description</td>
+                </tr>
+                <tr>
+                  <td>Crocodile</td>
+                  <td>Description</td>
+                </tr>
+                <tr>
+                  <td>Caiman</td>
+                  <td>Description</td>
+                </tr>
+                <tr>
+                 <td><input type="textarea" placeholder="New item"></td>
+                 <td><input type="textarea" placeholder="New Description"></td>
+
+                </tr>
+            </table>
+
             <button class="submit">Submit</button>
           </form>
       </div>
