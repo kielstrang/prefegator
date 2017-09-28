@@ -8,26 +8,6 @@ const knex = require("knex")(knexConfig[ENV]);
 
 const db = require('../lib/data-helpers.js')(knex);
 
-db.getPollIDByURL('qwerty')
-  .then(id => {
-    console.log(id);
-    db.getOptions(id)
-      .then((options) => {
-        console.log('getOptions:');
-        options.forEach((option) => {
-          console.log(option.option_name);
-        });
-      });
-
-    db.getResults(id)
-      .then((results) => {
-        console.log('getResults:');
-        results.forEach((result) => {
-          console.log(result.option_name);
-        });
-      });
-  });
-
 db.getOptionsByURL('qwerty')
   .then((options) => {
     console.log('getOptionsByURL:');
@@ -38,7 +18,7 @@ db.getOptionsByURL('qwerty')
 
 db.getResultsByURL('qwerty')
   .then((options) => {
-    console.log('getOptionsByURL:');
+    console.log('getResultsByURL:');
     options.forEach((option) => {
       console.log(option.option_name);
     });
