@@ -1,29 +1,33 @@
+// Main colors
+$color-primary: #4C6B2B;
+$color-secondary: #F8FCFF;
+$color-bg: #4A7069;
 
-$blue:    #007bff;
-$indigo:  #6610f2;
-$purple:  #6f42c1;
-$pink:    #e83e8c;
-$red:     #dc3545;
-$orange:  #fd7e14;
-$yellow:  #ffc107;
-$green:   #28a745;
-$teal:    #20c997;
-$cyan:    #17a2b8;
+@import "../node_modules/bootstrap/scss/bootstrap";
 
-
-// Body
-//
-// Settings for the `<body>` element.
-
-
-
-body {
-    padding-top: 5rem;
-}
 .starter-template {
     padding: 3rem 1.5rem;
     text-align: center;
 }
 
+.navbar {
+    background-color: $color-primary;
+    .navbar-brand{
+        color: $color-secondary;
+    }
+}
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss"
+.page-content {
+    background-color: $color-secondary;
+    min-height: 100vh;
+    padding-top: 75px;
+}
+
+
+body {
+    background-color: $color-bg;
+}
+
+li {
+  list-style-type:none;
+}

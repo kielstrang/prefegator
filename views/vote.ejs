@@ -5,10 +5,24 @@
   </head>
   <body>
     <% include partials/_header.ejs%>
-
-
-    <h1>Hello World!</h1>
-
+  <div class="container text-center page-content">
+    <h1><%= `Poll Name from create page displayed here` %></h1>
+    <div>
+      <%= `Description from create page displayed here` %>
+    </div>
+      <div class="container">
+        <form id="vote-poll-form" method="POST" action="/">
+          <ul id="sortable">
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Alligator - Description</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Crocodile - Description</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Caiman - Description</li>
+          </ul>
+          <div>
+            <button class="submit btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <% include partials/_footer.ejs%>
   </body>
