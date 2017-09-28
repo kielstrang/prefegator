@@ -15,6 +15,10 @@ $color-shaded: #86CCBF;
     text-align: center;
 }
 
+.list-group-item {
+    border-color: $color-primary;
+}
+
 .navbar {
     background-color: $color-primary;
     .navbar-brand{
