@@ -7,6 +7,7 @@ exports.seed = function(knex, Promise) {
         name: 'Which is the best animal?',
         email: 'gator@prefegator.com',
         desc: '',
+        url: 'qwerty',
         options: [
           { name: 'Alligator', desc: '' },
           { name: 'Crocodile', desc: '' },
