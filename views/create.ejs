@@ -7,12 +7,12 @@
   <body>
     <% include partials/_header.ejs%>
     <div class="container text-center page-content">
-      <h6>What do you need to decide?</h6>
+      <h6>The web's premier alligator-based preference aggregator</h6>
       
       <div class="container">
           <form id="create-poll-form" method="POST" action="/">
             <div>
-              <input type="textarea" placeholder="Email">
+              <input type="textarea" placeholder="Your email">
               <input type="textarea" placeholder="Decision">
             </div>
             <table class="table table-striped">
@@ -25,26 +25,26 @@
                 <tr>
                   <td>Alligator</td>
                   <td>Description</td>
-                  <td><button>Delete</button></td>
+                  <td><button class="btn btn-success">Delete</button></td>
                 </tr>
                 <tr>
                   <td>Crocodile</td>
                   <td>Description</td>
-                  <td><button>Delete</button></td>
+                  <td><button class="btn btn-success">Delete</button></td>
                 </tr>
                 <tr>
                   <td>Caiman</td>
                   <td>Description</td>
-                  <td><button>Delete</button></td>
+                  <td><button class="btn btn-success">Delete</button></td>
                 </tr>
                 <tr>
                  <td><input type="textarea" placeholder="New item"></td>
                  <td><input type="textarea" placeholder="New Description"></td>
-                 <td><button>Add</button></td>
+                 <td><button class="btn btn-success">Add</button></td>
                 </tr>
             </table>
 
-            <button class="submit">Submit</button>
+            <button class="submit btn">Submit</button>
           </form>
       </div>
   

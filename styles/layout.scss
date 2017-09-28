@@ -1,3 +1,8 @@
+// Main colors
+$color-primary: #4C6B2B;
+$color-secondary: #F8FCFF;
+$color-bg: #4A7069;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 .starter-template {
@@ -6,19 +11,19 @@
 }
 
 .navbar {
-    background-color: #4C6B2B;
+    background-color: $color-primary;
     .navbar-brand{
-        color: #F8FCFF;
+        color: $color-secondary;
     }
 }
 
 .page-content {
-    background-color: #F8FCFF;
+    background-color: $color-secondary;
     min-height: 100vh;
     padding-top: 75px;
 }
 
 
 body {
-    background-color: #4A7069;
+    background-color: $color-bg;
 }
