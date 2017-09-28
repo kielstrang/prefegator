@@ -16,7 +16,7 @@ $color-bg: #4A7069;
         color: $color-secondary;
     }
 }
-
+    
 .page-content {
     background-color: $color-secondary;
     min-height: 100vh;
@@ -26,8 +26,4 @@ $color-bg: #4A7069;
 
 body {
     background-color: $color-bg;
-}
-
-li {
-  list-style-type:none;
 }

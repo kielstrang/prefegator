@@ -11,7 +11,7 @@
       
       <div class="container">
           <form id="create-poll-form" method="POST" action="/">
-            <div>
+            <div class="container">
               <input type="textarea" placeholder="Your email">
               <input type="textarea" placeholder="Decision">
             </div>
@@ -22,7 +22,8 @@
                   <th>Description</th>
                 </tr>
               </thead>
-                <tr>
+              <tbody>
+              <tr>
                   <td>Alligator</td>
                   <td>Description</td>
                   <td><button class="btn btn-success">Delete</button></td>
@@ -42,13 +43,56 @@
                  <td><input type="textarea" placeholder="New Description"></td>
                  <td><button class="btn btn-success">Add</button></td>
                 </tr>
+              </tbody>
             </table>
-
+            
             <button class="submit btn">Submit</button>
           </form>
-      </div>
-  
-
+        </div>
+        
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col">
+                <span>Alligator</span>
+              </div>
+              <div class="col">
+                <span>Description</span>
+              </div>
+              <div class="col">
+                <button class="btn btn-success">Delete</button>
+              </div>
+                
+            </div>
+          </li>
+          <li class="list-group-item">
+              <div class="row">
+                <div class="col">
+                  <span>Crocodile</span>
+                </div>
+                <div class="col">
+                  <span>Description</span>
+                </div>
+                <div class="col">
+                  <button class="btn btn-success">Delete</button>
+                </div>  
+              </div>
+          </li>
+          <li class="list-group-item">
+              <div class="row">
+                <div class="col">
+                  <span>Caiman</span>
+                </div>
+                <div class="col">
+                  <span>Description</span>
+                </div>
+                <div class="col">
+                  <button class="btn btn-success">Delete</button>
+                </div>  
+              </div>
+          </li>
+          </ul>
+        
   </body>
 </html>
       <% include partials/_footer.ejs%>
