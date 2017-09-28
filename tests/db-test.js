@@ -8,6 +8,12 @@ const knex = require("knex")(knexConfig[ENV]);
 
 const db = require('../lib/data-helpers.js')(knex);
 
+db.getPollInfoByURL('qwerty')
+  .then(poll => {
+    console.log('Poll Info: ', poll);
+    console.log('Name:', poll.name);
+  });
+
 db.getOptionsByURL('qwerty')
   .then((options) => {
     console.log('getOptionsByURL:');
