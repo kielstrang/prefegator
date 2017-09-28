@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const express = require('express');
 const router = express.Router();
@@ -6,30 +6,33 @@ const router = express.Router();
 module.exports = (knex) => {
 
   router.get("/", (req, res) => {
-    //render create poll interface
+    res.render('create');
   });
 
   router.post("/", (req, res) => {
     //add new poll to database
-    //redirect to /:id/links
+    res.redirect(`/${req.params.id}/links`);
   });
 
   router.get("/:id", (req, res) => {
-    //render voting interface
+    //add vote to database
+    //calculate ranks from votes
+    //load option ranks
+    res.render('vote');
   });
 
 
   router.post("/:id", (req, res) => {
     //submit vote
-    //redirect to /:id/results
+    res.redirect(`/${req.params.id}/results`);
   });
 
   router.get("/:id/links", (req, res) => {
-    //render links page
+    res.render('links');
   });
 
   router.get("/:id/results", (req, res) => {
-    //render results page
+    res.render('results');
   });
 
   return router;
