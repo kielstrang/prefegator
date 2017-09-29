@@ -29,8 +29,6 @@ $(function() {
   });
 
   $('#create-poll-form').on('submit', function(event) {
-    event.preventDefault();
-
     const poll = {
       name: $('#decision').val(),
       email: $('#email').val(),
@@ -42,7 +40,11 @@ $(function() {
       poll.options.push({ name: $(item).text() });
     });
     console.log(poll);
-
+    $('<input>').attr('type', 'hidden')
+      .attr('name', 'poll')
+      .attr('value', JSON.stringify(poll))
+      .appendTo($('#create-poll-form'));
+    return true;
   });
 
 
