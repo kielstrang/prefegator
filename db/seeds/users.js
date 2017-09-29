@@ -1,8 +1,7 @@
 exports.seed = function(knex, Promise) {
+  const db = require('../../lib/data-helpers.js')(knex);
   return knex('polls').del()
     .then(() => {
-      const db = require('../../lib/data-helpers.js')(knex);
-
       const poll = {
         name: 'Which is the best animal?',
         email: 'gator@prefegator.com',
@@ -16,5 +15,9 @@ exports.seed = function(knex, Promise) {
       };
 
       return db.createPoll(poll);
+    })
+    .then(() => {
+      const ballot = ["Alligator", "Caiman", "Crocodile"];
+      return db.saveBallot('qwerty', ballot);
     });
 };
