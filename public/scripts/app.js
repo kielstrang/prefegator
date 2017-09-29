@@ -9,67 +9,25 @@
 //   });;
 // });
 
-$(function () {
-//   // Base code for logo redirect to /create.
-//   // Can just href instead. Affects design choices?
-//   $('.navbar-brand').on('click', function () {
-//     window.location.href = '/'
-//     return false
-//   })
 
-  // appends to renderOptions
-  function pollOptionsCreator (option) {
-    // create poll options on /create
-    // Starter-function for add-poll options button
-    $('.list-buttons fa fa-plus-square-o fa-2x').on('submit', function () {
-      const $list = $('<list>').addClass('list-group-item grouped-list');
-      const $divRow = $('<div>').addClass('row option-div');
-      const $divColName = $('<div>').addClass('col name-div');
-      const $spanName = $('<span>').addClass('nameFromDB');
-      const $divColDesc = $('<div>').addClass('col desc-div');
-      const $spanDesc = $('<span>').addClass('descFromDB');
-      const $divColDelete = $('<div>').addClass('col button-del');
-      const $buttonDelete = $('<button>').addClass('list-buttons fa fa-minus-square-o fa-2x')
+$(function() {
+  $('.add-option').on('click', function () {
+    const $list = $('<li>').addClass('list-group-item');
+    const $divRow = $('<div>').addClass('row');
+    const $divColName = $('<div>').addClass('col');
+    const $spanName = $('<span>');
+    const $divColDelete = $('<div>').addClass('col');
+    const $buttonDelete = $('<i>').addClass('list-buttons fa fa-minus-square-o fa-2x')
 
-      // $list.text(db.source);
-      $spanName.text(db.source.name);
-      $spanDesc.text(db.source.desc);
+    $spanName.text($('.add-option-name').val());
 
-      $divColName.append($spanName);
-      $divColDesc.append($spanDesc);
-      $divColDelete.append($buttonDelete);
+    $divColName.append($spanName);
+    $divColDelete.append($buttonDelete);
+    $divRow.append($divColName, $divColDelete);
+    $list.append($divRow);  
+    $list.insertBefore('.list-add-option');
+  })
 
-      $divRow.append($divColName, $divColDesc, $divColDelete);
-
-      $list.append($divRow);  
-      return $list
-    })
-  };
-
-  // Starter-function for displaying options made by user
-  function renderOptions (options) {
-    var optionsContainer = $('.list-group')
-    optionsContainer.empty()
-    options.forEach(function (option) {
-      optionsContainer.append(pollOptionsCreator(option))
-    })
-  };
-
-
-  function loadOptions () {
-    $.ajax({
-      url: "/options",
-      method: "GET",
-      success: function (data) {
-        renderOptions(data);
-      },
-      failure: function (err) {
-        console.log(err);
-      }
-    });
-  }
-
-  loadOptions();
 
 
   function pollVoteCreator() {
