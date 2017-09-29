@@ -1,0 +1,10 @@
+// Main colors
+$color-primary: #4C6B2B;
+$color-secondary: #F8FCFF;
+$color-bg: #4A7069;
+$color-shaded: #86CCBF;
+
+.list-group-item.winner {
+    background-color: $color-primary;
+    color: $color-secondary;
+}

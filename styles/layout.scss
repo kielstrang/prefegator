@@ -5,7 +5,10 @@ $color-bg: #4A7069;
 $color-shaded: #86CCBF;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+// Results page
+@import "./results";
 
+// Create page
 .list-buttons {
     color: $color-primary;
 }
