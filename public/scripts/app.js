@@ -31,7 +31,9 @@ $(function() {
     $('.add-option-name').val('');
   })
 
-  });
+  $('.delete-option').on('click', function() {
+    
+  })
 
   $('#create-poll-form').on('submit', function(event) {
     event.preventDefault();
