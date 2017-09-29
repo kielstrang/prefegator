@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <% include partials/_head.ejs%>
+    <script type="text/javascript" src="/scripts/vote.js"></script>
   </head>
   <body>
     <% include partials/_header.ejs%>
@@ -11,9 +12,8 @@
       <%= poll.desc %>
     </div>
       <div class="container">
-        <form id="vote-poll-form" method="POST" action="/polls">
+        <form id="vote-poll-form" method="POST" action=<%= `/polls/${id}` %>>
           <ul class="list-group" id="sortable">
-
             <% for(const option of poll.options) { %>
               <li class="list-group-item ui-state-default">
                 <div class="row">
