@@ -8,9 +8,9 @@ exports.seed = function(knex, Promise) {
         desc: '',
         url: 'qwerty',
         options: [
-          { name: 'Alligator', desc: '', rank: 2 },
-          { name: 'Crocodile', desc: '', rank: 3 },
-          { name: 'Caiman', desc: '', rank: 1 }
+          { name: 'Alligator', desc: ''},
+          { name: 'Crocodile', desc: ''},
+          { name: 'Caiman', desc: ''}
         ]
       };
 
