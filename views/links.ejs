@@ -6,25 +6,25 @@
   <body>
     <% include partials/_header.ejs%>
 
+    <div class="container text-center page-content">
+      <h1>Poll Created!</h1>
 
-    <h1>Poll Created!</h1>
-
-    <div>
-      <a href="link">Voting link</a>
-      <p> Send this link to your friends so they can vote!</p>
+      <div>
+        <a href="#">Voting link</a>
+        <p> Send this link to your friends so they can vote!</p>
+      </div>
+      <div>
+        <a href="#">Results</a>
+        <p> Use this link to see the voting result.</p>
+      </div>
+      <div>
+        The links above were also sent to the following email address:
+        <a href="#">email</a>
+      </div>
+      <div>
+        The poll will expire in x amount of time.
+      </div>
     </div>
-    <div>
-      <a href="link">Results</a>
-      <p> Use this link to see the voting result.</p>
-    </div>
-    <div>
-      The links above were also sent to the following email address:
-      <a href="email link">email</a>
-    </div>
-    <div>
-      The poll will expire in x amount of time.
-    </div>
-  
-    <% include partials/_footer.ejs%>
+      <% include partials/_footer.ejs%>
   </body>
 </html>
