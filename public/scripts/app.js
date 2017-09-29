@@ -26,6 +26,8 @@ $(function() {
     $divRow.append($divColName, $divColDelete);
     $list.append($divRow);  
     $list.insertBefore('.list-add-option');
+
+    $('.add-option-name').val('');
   })
 
 
