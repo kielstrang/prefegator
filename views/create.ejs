@@ -6,19 +6,16 @@
   </head>
   <body>
     <% include partials/_header.ejs%>
-    <div class="container text-center page-content">
+    <div class="container text-center">
       <div class="jumbotron welcome">
         <h4>The web's premier alligator-based preference aggregator</h4>
         <p>Having trouble deciding on what to do? Try Prefegator and let your friends help you</p>
         
-        <div class="container user-input">
           <form id="create-poll-form" method="POST" action="/">
             <input type="textarea" placeholder="Your email">
             <input type="textarea" placeholder="Decision">
-          </div><!--container user-input-->
       </div><!--jumbotron welcome-->
         
-      <div class="container add-list">
         <ul class="list-group">
           <li class="list-group-item">
             <div class="row">
@@ -48,7 +45,6 @@
                 <div class="col">
                   <i class="list-buttons fa fa-minus-square-o fa-2x"></i>
                 </div> <!--col-->
-              </div><!--container-->
           </li>
           <li class="list-group-item">
               <div class="row">
@@ -61,11 +57,10 @@
               </div><!--row-->
             </li>
           </ul>
-          <div class="container submit-button">
-            <button class="submit btn btn-success">Submit</button>
+          <div class="button-submit"> 
+            <button class="btn btn-success">Submit</button>
           </div>
         </form>
-      </div><!--container-->
       <% include partials/_footer.ejs%>
     </div>
   </body>

@@ -9,6 +9,15 @@ $color-shaded: #86CCBF;
 @import "./results";
 
 // Create page
+@media (min-width: 992px) {
+    .container {
+      width: 750px;
+    }
+  }
+
+.button-submit {
+    padding-top: 15px;
+}
 .list-buttons {
     color: $color-primary;
 }
@@ -28,12 +37,13 @@ $color-shaded: #86CCBF;
 
 .navbar {
     background-color: $color-primary;
+    justify-content: center;
     .navbar-brand{
         color: $color-secondary;
     }
 }
     
-.page-content {
+.container {
     background-color: $color-secondary;
     min-height: 100vh;
     padding-top: 75px;
