@@ -6,11 +6,12 @@
   <body>
     <% include partials/_header.ejs%>
   <div class="container text-center page-content">
+    <div class="jumbotron">
     <h1><%= `Poll Name from create page displayed here` %></h1>
     <div>
       <%= `Description from create page displayed here` %>
     </div>
-      <div class="container">
+    </div>
         <form id="vote-poll-form" method="POST" action="/">
           <ul class="list-group" id="sortable">
             <li class="list-group-item ui-state-default">
@@ -48,9 +49,7 @@
             <button class="submit btn">Submit</button>
           </div>
         </form>
-      </div>
+        <% include partials/_footer.ejs%>
     </div>
-
-    <% include partials/_footer.ejs%>
   </body>
 </html>
