@@ -16,34 +16,61 @@ $(function () {
 //     window.location.href = '/'
 //     return false
 //   })
-  
-  // Starter-function for displaying options made by user
-  function renderOptions (options) {
-    var optionsContainer = $('.???')
-    optionsContainer.empty()
-    options.forEach(function (tweet) {
-      optionsContainer.append(/* something */)
-    })
-  };
 
   // appends to renderOptions
   function pollOptionsCreator (option) {
     // create poll options on /create
     // Starter-function for add-poll options button
-    $('btn btn-success').on('submit', function () {
-      event.preventDefault()
+    $('.list-buttons fa fa-plus-square-o fa-2x').on('submit', function () {
+      const $list = $('<list>').addClass('list-group-item grouped-list');
+      const $divRow = $('<div>').addClass('row option-div');
+      const $divColName = $('<div>').addClass('col name-div');
+      const $spanName = $('<span>').addClass('nameFromDB');
+      const $divColDesc = $('<div>').addClass('col desc-div');
+      const $spanDesc = $('<span>').addClass('descFromDB');
+      const $divColDelete = $('<div>').addClass('col button-del');
+      const $buttonDelete = $('<button>').addClass('list-buttons fa fa-minus-square-o fa-2x')
+
+      // $list.text(db.source);
+      $spanName.text(db.source.name);
+      $spanDesc.text(db.source.desc);
+
+      $divColName.append($spanName);
+      $divColDesc.append($spanDesc);
+      $divColDelete.append($buttonDelete);
+
+      $divRow.append($divColName, $divColDesc, $divColDelete);
+
+      $list.append($divRow);  
+      return $list
     })
-    //  Classes
-    // append to <ul class"list-group"
-    // <li>".list-group-item grouped-list"
-    // <div>".row line-div"
-    // <div>".col name-div"
-    //   <span>"name from database"
-    // <div>".col desc-div"
-    //   <span>"desc from database"
-    // <div>".col delete-div" 
-    //   <button>".btn btn-sucess">Delete  
   };
+
+  // Starter-function for displaying options made by user
+  function renderOptions (options) {
+    var optionsContainer = $('.list-group')
+    optionsContainer.empty()
+    options.forEach(function (option) {
+      optionsContainer.append(pollOptionsCreator(option))
+    })
+  };
+
+
+  function loadOptions () {
+    $.ajax({
+      url: "/options",
+      method: "GET",
+      success: function (data) {
+        renderOptions(data);
+      },
+      failure: function (err) {
+        console.log(err);
+      }
+    });
+  }
+
+  loadOptions();
+
 
   function pollVoteCreator() {
     // creates the /:id table from database
@@ -61,8 +88,8 @@ $(function () {
   }
 
   // :id (vote) table creator
-  function pollOptionsSubmitter (options) {
-    // submits the table made by pollOptionsCreaetor
+  function pollSubmitter (options) {
+    // submits the table made by pollVoteCreator/pollOptionsCreator
     // from database
     $('.submit btn').on('submit', function () {
       // consider .class names for all elements
