@@ -7,19 +7,28 @@
 
     <body>
         <% include partials/_header.ejs%>
-        <div class="container text-center page-content">
+        <div class="container text-center">
           <div class="jumbotron welcome">
-            <h4>These are your results:</h4>
+            <h2>Poll name - Results:</h2>
+            <h4>Poll description</h4>
+            <p>Description of the thing that you were voting on.</p>
           </div><!--jumbotron welcome-->
-          
-          <div class="container add-list">
-            <ol class="list-group">
-              <li class="list-group-item winner">1. Alligator</li>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="row">
+                      <div class="col">
+                        <span></span>
+                      </div>
+                      <div class="col">
+                          <i class="list-buttons fa fa-plus-square-o fa-2x"></i>
+                      </div> <!--col-->
+                    </div><!--row-->
+                  </li>
+              <li class="list-group-item winner">1. Top Result: Alligator</li>
               <li class="list-group-item">2. Crocodile</li>
               <li class="list-group-item">3. Caiman</li>
-          </div><!--container add-list-->
+            </ul>
           <% include partials/_footer.ejs%>
         </div>
       </body>
-
 </html>
