@@ -43,7 +43,7 @@ $(function() {
     //above method will query the dom and return an array of
     //each item's current position. We send this information to
     //the db.
-    }
+    })
   }
 
 
