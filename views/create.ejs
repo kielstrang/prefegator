@@ -7,94 +7,65 @@
   <body>
     <% include partials/_header.ejs%>
     <div class="container text-center page-content">
-      <h6>The web's premier alligator-based preference aggregator</h6>
-      
-      <div class="container">
-          <form id="create-poll-form" method="POST" action="/">
-            <div class="container">
-              <input type="textarea" placeholder="Your email">
-              <input type="textarea" placeholder="Decision">
-            </div>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Option</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
-              <tbody>
-              <tr>
-                  <td>Alligator</td>
-                  <td>Description</td>
-                  <td><button class="btn btn-success">Delete</button></td>
-                </tr>
-                <tr>
-                  <td>Crocodile</td>
-                  <td>Description</td>
-                  <td><button class="btn btn-success">Delete</button></td>
-                </tr>
-                <tr>
-                  <td>Caiman</td>
-                  <td>Description</td>
-                  <td><button class="btn btn-success">Delete</button></td>
-                </tr>
-                <tr>
-                 <td><input type="textarea" placeholder="New item"></td>
-                 <td><input type="textarea" placeholder="New Description"></td>
-                 <td><button class="btn btn-success">Add</button></td>
-                </tr>
-              </tbody>
-            </table>
-            
-            <button class="submit btn">Submit</button>
-          </form>
-        </div>
+      <div class="jumbotron welcome">
+        <h4>The web's premier alligator-based preference aggregator</h4>
+        <p>Having trouble deciding on what to do? Try Prefegator and let your friends help you</p>
         
+        <div class="container user-input">
+          <form id="create-poll-form" method="POST" action="/">
+            <input type="textarea" placeholder="Your email">
+            <input type="textarea" placeholder="Decision">
+          </div><!--container user-input-->
+      </div><!--jumbotron welcome-->
+        
+      <div class="container add-list">
         <ul class="list-group">
           <li class="list-group-item">
             <div class="row">
               <div class="col">
                 <span>Alligator</span>
-              </div>
+              </div><!--col-->
               <div class="col">
-                <span>Description</span>
-              </div>
-              <div class="col">
-                <button class="btn btn-success">Delete</button>
-              </div>
-                
-            </div>
+                <i class="list-buttons fa fa-minus-square-o fa-2x"></i>
+              </div><!--col-->
+            </div><!--row-->
           </li>
           <li class="list-group-item">
               <div class="row">
                 <div class="col">
                   <span>Crocodile</span>
-                </div>
+                </div><!--col-->
                 <div class="col">
-                  <span>Description</span>
-                </div>
-                <div class="col">
-                  <button class="btn btn-success">Delete</button>
-                </div>  
-              </div>
+                  <i class="list-buttons fa fa-minus-square-o fa-2x"></i>
+                </div><!--col-->
+              </div><!--row-->
           </li>
           <li class="list-group-item">
               <div class="row">
                 <div class="col">
                   <span>Caiman</span>
-                </div>
+                </div><!--col-->
                 <div class="col">
-                  <span>Description</span>
-                </div>
-                <div class="col">
-                  <button class="btn btn-success">Delete</button>
-                </div>  
-              </div>
+                  <i class="list-buttons fa fa-minus-square-o fa-2x"></i>
+                </div> <!--col-->
+              </div><!--container-->
           </li>
+          <li class="list-group-item">
+              <div class="row">
+                <div class="col">
+                  <input type="textarea" placeholder="Add an item">
+                </div>
+                <div class="col">
+                    <i class="list-buttons fa fa-plus-square-o fa-2x"></i>
+                </div> <!--col-->
+              </div><!--row-->
+            </li>
           </ul>
-        
-  </body>
-</html>
+          <div class="container submit-button">
+            <button class="submit btn btn-success">Submit</button>
+          </div>
+        </form>
+      </div><!--container-->
       <% include partials/_footer.ejs%>
     </div>
   </body>

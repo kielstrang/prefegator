@@ -2,12 +2,28 @@
 $color-primary: #4C6B2B;
 $color-secondary: #F8FCFF;
 $color-bg: #4A7069;
+$color-shaded: #86CCBF;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+// Results page
+@import "./results";
+
+// Create page
+.list-buttons {
+    color: $color-primary;
+}
 
 .starter-template {
     padding: 3rem 1.5rem;
     text-align: center;
+}
+
+.submit-button {
+    padding-top: 15px;
+}
+
+.list-group-item {
+    border-color: $color-primary;
 }
 
 .navbar {
@@ -21,6 +37,10 @@ $color-bg: #4A7069;
     background-color: $color-secondary;
     min-height: 100vh;
     padding-top: 75px;
+}
+
+.welcome {
+    padding: 2rem 1rem;
 }
 
 
