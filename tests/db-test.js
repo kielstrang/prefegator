@@ -18,13 +18,11 @@ const db = require('../lib/data-helpers.js')(knex);
 //     console.log(poll);
 //   });
 
-const votes = [
-  { name: 'Alligator', rating: 1 },
-  { name: 'Crocodile', rating: 2 },
-  { name: 'Caiman', rating: 3 },
-  { name: 'Troll', rating: 3 },
-];
-db.saveVote('qwerty', votes)
+const vote = [ "Alligator", "Crocodile", "Caiman"];
+db.saveVote('qwerty', vote)
   .then(res => {
-    console.log(res);
+    console.log('Valid: ', res);
+  })
+  .catch(err => {
+    console.log(err.message);
   });
