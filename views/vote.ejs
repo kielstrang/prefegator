@@ -2,48 +2,30 @@
 <html lang="en">
   <head>
     <% include partials/_head.ejs%>
+    <script type="text/javascript" src="/scripts/vote.js"></script>
   </head>
   <body>
     <% include partials/_header.ejs%>
   <div class="container text-center page-content">
-    <div class="jumbotron">
-    <h1><%= `Poll Name from create page displayed here` %></h1>
+    <h1><%= poll.name %></h1>
     <div>
-      <%= `Description from create page displayed here` %>
+      <%= poll.desc %>
     </div>
-    </div>
-        <form id="vote-poll-form" method="POST" action="/">
+      <div class="container">
+        <form id="vote-poll-form" method="POST" action=<%= `/polls/${id}` %>>
           <ul class="list-group" id="sortable">
-            <li class="list-group-item ui-state-default">
-              <div class="row">
-                <div class="col">
-                  <span class="item ui-icon ui-icon-arrowthick-2-n-s" >Alligator</span>
+            <% for(const option of poll.options) { %>
+              <li class="list-group-item ui-state-default">
+                <div class="row">
+                  <div class="col">
+                    <span class="item ui-icon ui-icon-arrowthick-2-n-s" ><%= option.name %></span>
+                  </div>
+                  <div class="col">
+                    <span class="ui-icon ui-icon-arrowthick-2-n-s"><%= option.desc %></span>
+                  </div>
                 </div>
-                <div class="col">
-                  <span class="ui-icon ui-icon-arrowthick-2-n-s">Description</span>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item ui-state-default">
-              <div class="row">
-                <div class="col">
-                  <span class="item ui-icon ui-icon-arrowthick-2-n-s" >Crocodile</span>
-                </div>
-                <div class="col">
-                  <span class="ui-icon ui-icon-arrowthick-2-n-s">Description</span>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item ui-state-default">
-              <div class="row">
-                <div class="col">
-                  <span class="item ui-icon ui-icon-arrowthick-2-n-s" >Caiman</span>
-                </div>
-                <div class="col">
-                  <span class="ui-icon ui-icon-arrowthick-2-n-s">Description</span>
-                </div>
-              </div>
-            </li>
+              </li>
+            <% } %>
           </ul>
           <div>
             <button class="submit btn">Submit</button>
