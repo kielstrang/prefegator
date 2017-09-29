@@ -12,6 +12,11 @@
 
 $(function() {
   $('.add-option').on('click', function() {
+    $('#create-option-form').submit();
+  });
+
+  $('#create-option-form').on('submit', function(event) {
+    event.preventDefault();
     const $list = $('<li>').addClass('list-group-item');
     const $divRow = $('<div>').addClass('row');
     const $divColName = $('<div>').addClass('col');

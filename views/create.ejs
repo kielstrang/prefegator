@@ -51,15 +51,17 @@
               </div> <!--col-->
         </li>
         <li class="list-group-item list-add-option">
-            <div class="form-group row">
-                <input type="text" class="add-option-name form-control col" placeholder="Add an item">
-              <div class="col">
-                  <i class="list-buttons fa fa-plus-square-o fa-2x add-option"></i>
-              </div><!--col-->
-            </div><!--row-->
-            <div class="row">
-              <input type="text" class="form-control col-6" placeholder="Add a description (optional)">
-            </div>
+            <form id="create-option-form" method="POST" action="/">
+              <div class="form-group row">
+                  <input type="text" class="add-option-name form-control col" placeholder="Add an item">
+                <div class="col">
+                    <i class="list-buttons fa fa-plus-square-o fa-2x add-option"></i>
+                </div><!--col-->
+              </div><!--row-->
+              <div class="row">
+                <input type="text" class="form-control col-6" placeholder="Add a description (optional)">
+              </div>
+            </form>
           </li>
         </ul>
         <form id="create-poll-form" method="POST" action="/">
