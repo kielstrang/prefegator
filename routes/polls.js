@@ -3,15 +3,27 @@
 const express = require('express');
 const router = express.Router();
 
-module.exports = (knex) => {
+function makePollURL(length) {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < length; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
+
+module.exports = (db) => {
 
   router.get("/", (req, res) => {
     res.render('create');
   });
 
   router.post("/", (req, res) => {
-    //add new poll to database
-    res.redirect(`/${req.params.id}/links`);
+    const poll = JSON.parse(req.body.poll);
+    poll.url = makePollURL(8);
+    db.createPoll(poll);
+    res.redirect(`/${poll.url}/links`);
   });
 
   router.get("/:id", (req, res) => {
