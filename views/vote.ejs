@@ -11,22 +11,33 @@
     <p><%= poll.desc %> </p>
       <div class="container">
         <form id="vote-poll-form" method="POST" action=<%= `/polls/${id}` %>>
-          <ul class="list-group" id="sortable">
-            <% for(const option of poll.options) { %>
-              <li class="list-group-item ui-state-default">
-                <div class="row">
-                  <div class="col">
-                    <span class="item ui-icon ui-icon-arrowthick-2-n-s" ><%= option.name %></span>
-                  </div>
-                  <div class="col">
-                    <span class="ui-icon ui-icon-arrowthick-2-n-s"><%= option.desc %></span>
-                  </div>
-                </div>
-              </li>
+          <div class="row">
+          <div class="col-sm-1">
+          <ol class="list-group">
+            <% for(const option in poll.options) { %>
+              <li class="list-group-item ui-state-default"><%= Number(option) + 1 %></li>
             <% } %>
-          </ul>
-          <div>
-            <button class="submit btn">Submit</button>
+          </ol>
+          </div>
+          <div class="col-sm-11">
+              <ol class="list-group" id="sortable">
+                <% for(const option of poll.options) { %>
+                  <li class="list-group-item ui-state-default">
+                    <!-- <div class="row">
+                      <div class="col"> -->
+                        <span class="item ui-icon ui-icon-arrowthick-2-n-s" ><%= option.name %></span>
+                      <!-- </div>
+                      <div class="col">
+                        <span class="ui-icon ui-icon-arrowthick-2-n-s"><%= option.desc %>Dummy description</span>
+                      </div>
+                    </div> -->
+                  </li>
+                <% } %>
+              </ol>
+              </div>
+          </div>
+          <div class="button-submit">
+            <button class="submit btn btn-success">Vote!</button>
           </div>
         </form>
         <% include partials/_footer.ejs%>
