@@ -3,17 +3,6 @@
 const express = require('express');
 const router = express.Router();
 
-const URL_LENGTH = 8;
-function makePollURL(length) {
-  var text = "";
-  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-  for(var i = 0; i < length; i++)
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-  return text;
-}
-
 module.exports = (db) => {
 
   router.get("/", (req, res) => {
@@ -22,9 +11,8 @@ module.exports = (db) => {
 
   router.post("/", (req, res) => {
     const poll = JSON.parse(req.body.poll);
-    poll.url = makePollURL(URL_LENGTH);
     db.createPoll(poll)
-      .then(res.redirect(`/polls/${poll.url}/links`));
+      .then(url => res.redirect(`/polls/${url}/links`));
   });
 
   router.get("/:id", (req, res) => {
