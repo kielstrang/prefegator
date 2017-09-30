@@ -7,24 +7,24 @@
     <% include partials/_header.ejs%>
 
     <div class="container text-center">
-      <h1>Poll Created!</h1>
-
-      <div>
-        <a href=<%= `/polls/${id}` %>>Voting link</a>
-        <p> Send this link to your friends so they can vote!</p>
-      </div>
-      <div>
-        <a href=<%= `/polls/${id}/results` %>>Results</a>
-        <p> Use this link to see the voting result.</p>
-      </div>
-      <div>
-        The links above were also sent to the following email address:
-        <a href="#">email</a>
-      </div>
-      <div>
-        The poll will expire in x amount of time.
-      </div>
+      <h2><%= poll.name %></h2>
+      <h4>Poll Created!</h4>
+    <div>
+      <a href=<%= `/polls/${id}` %>>Voting link</a>
+      <p> Send this link to your friends so they can vote!</p>
     </div>
-      <% include partials/_footer.ejs%>
-  </body>
+    <div>
+      <a href=<%= `/polls/${id}/results` %>>Results</a>
+      <p> Use this link to see the voting result.</p>
+    </div>
+    <div>
+      These links were also sent to you at
+      <a href="mailto:<%= poll.email %>"><%= poll.email %></a>
+    </div>
+    <div>
+      The poll will expire in x amount of time.
+    </div>
+  </div>
+    <% include partials/_footer.ejs%>
+</body>
 </html>

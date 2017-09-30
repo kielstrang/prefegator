@@ -28,16 +28,15 @@ $(function() {
   // Submit poll to database
   $('#create-poll-form').on('submit', function(event) {
     const poll = {
-      name: $('#decision').val(),
+      name: $('#poll-name').val(),
       email: $('#email').val(),
-      desc: '',
+      desc: $('#poll-desc').val(),
       options: []
     };
     
     $('.item-name').each((i, item) => {
       poll.options.push({ name: $(item).text() });
     });
-    console.log(poll);
     $('<input>').attr('type', 'hidden')
     .attr('name', 'poll')
     .attr('value', JSON.stringify(poll))
