@@ -50,27 +50,10 @@ $(function() {
    })
 
 
+   // Description toggle functionality
    $('.item-desc').hide();
    $('.div').on('click', function() {
     $('.item-desc').show();
    });
-
-  // :id/results table creator. Identical to pollVoteCreator except for database source?
-  function pollResultCreator(votes) {
-    // create table based on currently cast votes
-    // from database
-    // for each option, append below to <ul class"list-group id="sortable" on /:id
-    // <li>".list-group-item grouped-list ui-state-default"
-    // <div>".row line-div"
-    // <div>".col name-div"
-    //   <span>".item ui-icon""name from database"
-    // <div>".col desc-div"
-    //   <span>".ui-icon""desc from database"
-    // <div>".col current-rank"
-    //   <span>".ui-icon""display current rank"
-    //figure out way to track current position for this span
-    //$('.item') dom query?
-  };
-
 
 });
