@@ -23,8 +23,8 @@ module.exports = (db) => {
   router.post("/", (req, res) => {
     const poll = JSON.parse(req.body.poll);
     poll.url = makePollURL(URL_LENGTH);
-    db.createPoll(poll);
-    res.redirect(`/polls/${poll.url}/links`);
+    db.createPoll(poll)
+      .then(res.redirect(`/polls/${poll.url}/links`));
   });
 
   router.get("/:id", (req, res) => {
@@ -39,8 +39,10 @@ module.exports = (db) => {
 
   router.post("/:id", (req, res) => {
     const ballot = JSON.parse(req.body.ballot);
-    db.saveBallot(req.params.id, ballot);
-    res.redirect(`/polls/${req.params.id}/results`);
+    db.saveBallot(req.params.id, ballot)
+      .then(() => {
+        res.redirect(`/polls/${req.params.id}/results`);
+      });
   });
 
   router.get("/:id/links", (req, res) => {
