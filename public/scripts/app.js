@@ -42,7 +42,7 @@ $(function() {
     .attr('name', 'poll')
     .attr('value', JSON.stringify(poll))
     .appendTo($('#create-poll-form'));
-    return true;
+    return true;  
   });
   
   // Delete button for options on create page
@@ -51,25 +51,10 @@ $(function() {
    })
 
 
-
-   // creates the /:id table from database
-  // function pollVoteCreator(database) {
-  //   const $list = $('<li>').addClass('list-group-item grouped-list ui-state-default');
-  //   const $divRow = $('<div>').addClass('row');
-  //   const $divColName = $('<div>').addClass('col');
-  //   const $spanName = $('<span>').addClass('item ui.icon item-name');
-    
-  //   $spanName.text(/*from database somehow*/);
-    
-  //   $divColName.append($spanName);
-  //   $divRow.append($divColName);
-  //   $list.add($divRow);
-  //   $list.apend('#sortable');
-    
-  // }
-  
-  // Votearranger/ranker on /:id
-  $('#sortable').sortable();
+   $('.item-desc').hide();
+   $('.div').on('click', function() {
+    $('.item-desc').show();
+   });
 
   // :id/results table creator. Identical to pollVoteCreator except for database source?
   function pollResultCreator(votes) {

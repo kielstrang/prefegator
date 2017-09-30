@@ -10,4 +10,6 @@ $(function() {
       .appendTo($('#vote-poll-form'));
     return true;
   });
+  $('#sortable').sortable(); 
 });
+
