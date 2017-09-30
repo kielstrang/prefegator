@@ -15,6 +15,11 @@ $color-shaded: #86CCBF;
     }
   }
 
+// Fixes bug between jquery-ui sortable and bootstrap
+.ui-sortable-placeholder {
+    height: 50px;
+}
+
 .button-submit {
     padding-top: 15px;
     justify-content: right;
