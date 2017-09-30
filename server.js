@@ -37,7 +37,11 @@ app.use("/styles", sass({
 app.use(express.static("public"));
 
 // Mount all resource routes
-app.use("/", pollsRoutes(db));
+app.use('/polls', pollsRoutes(db));
+
+app.get("/", (req, res) => {
+  res.redirect('/polls');
+});
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);

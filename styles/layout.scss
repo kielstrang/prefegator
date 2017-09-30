@@ -65,3 +65,7 @@ $color-shaded: #86CCBF;
 body {
     background-color: $color-bg;
 }
+
+textarea {
+    resize: none;
+}
