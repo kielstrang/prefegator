@@ -6,7 +6,7 @@ $(function() {
 
   $('#create-option-form').on('submit', function(event) {
     event.preventDefault();
-    const $list = $('<li>').addClass('list-group-item list-option');
+    const $list = $('<li>').addClass('list-group-item');
     const $divRowMain = $('<div>').addClass('row');
     const $divColName = $('<div>').addClass('col');
     const $spanName = $('<span>').addClass('item-name');
@@ -40,16 +40,13 @@ $(function() {
       options: []
     };
     
-
-    $('.list-option').each((i, item) => {
-      poll.options.push({ name: $(item).find('.item-name').text(),
-                          desc: $(item).find('.item-desc').text()
-                         });
-    });
-
     // $('.list-group-item').each((i, item) => {
-    //   console.log($(item).find('.item-name').text());
+    //   console.log($((item).find('.item-name').text()));
     // });
+
+    $('.list-group-item').each((i, item) => {
+      poll.options.push({ name: $(this).find('.item-name').text() });
+    });
 
     $('<input>').attr('type', 'hidden')
     .attr('name', 'poll')
@@ -67,10 +64,6 @@ $(function() {
    // Description toggle functionality
    $('.item-desc').hide(); //This one might not be needed, should only live in #create-option-form
   $('ul').on('click', '.list-group-item', function(event) {
-    $(event.currentTarget).find('small').slideToggle();
-  });
-
-  $('ol').on('click', '.list-group-item', function(event) {
     $(event.currentTarget).find('small').slideToggle();
   });
 

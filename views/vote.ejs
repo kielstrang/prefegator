@@ -23,14 +23,14 @@
               <ol class="list-group" id="sortable">
                 <% for(const option of poll.options) { %>
                   <li class="list-group-item ui-state-default">
-                    <!-- <div class="row">
-                      <div class="col"> -->
-                        <span class="item ui-icon ui-icon-arrowthick-2-n-s" ><%= option.name %></span>
-                      <!-- </div>
+                    <div class="row">
                       <div class="col">
-                        <span class="ui-icon ui-icon-arrowthick-2-n-s"><%= option.desc %>Dummy description</span>
+                        <span class="item ui-icon ui-icon-arrowthick-2-n-s" ><%= option.name %></span>
                       </div>
-                    </div> -->
+                    </div>
+                      <div class="row">
+                        <small class="item-desc ui-icon ui-icon-arrowthick-2-n-s"><%= option.desc %></small>
+                    </div>
                   </li>
                 <% } %>
               </ol>

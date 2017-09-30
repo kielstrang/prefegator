@@ -11,5 +11,9 @@ $(function() {
     return true;
   });
   $('#sortable').sortable(); 
+  $('.item-desc').hide();
 });
 
+// $('ol').on('click', '.list-group-item', function(event) {
+//   $(event.currentTarget).find('span').slideToggle();
+// });

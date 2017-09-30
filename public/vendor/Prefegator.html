@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<!-- saved from url=(0027)http://localhost:8080/polls -->
+<html lang="en" class="fa-events-icons-ready"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Prefegator</title>
-    <% include partials/_head.ejs%>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="./Prefegator_files/layout.css" type="text/css">
+<!-- <link rel="stylesheet" href="jquery-ui.min.css"> -->
+
+<script type="text/javascript" src="./Prefegator_files/jquery-3.0.0.js"></script>
+<script src="./Prefegator_files/jquery-ui.min.js"></script>
+<script src="./Prefegator_files/jquery-1.12.4.js"></script>
+<script src="./Prefegator_files/jquery-ui.js"></script>
+
+
+
+<script src="./Prefegator_files/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="./Prefegator_files/app.js"></script>
+
+<!-- Font awesome -->
+<script src="./Prefegator_files/3def956506.js"></script><link href="./Prefegator_files/3def956506.css" media="all" rel="stylesheet">
+
   </head>
   <body>
-    <% include partials/_header.ejs%>
+    <nav class="navbar navbar-expand-md fixed-top">
+    <a class="navbar-brand" href="http://localhost:8080/polls#">Prefegator</a>
+</nav>
+
     <div class="container text-center">
       <div class="jumbotron welcome">
         <h4>The web's premier alligator-based preference aggregator</h4>
@@ -21,7 +41,7 @@
           </div>
     </div><!--jumbotron welcome-->
       <ul class="list-group">
-        <li class="list-group-item list-option">
+        <li class="list-group-item">
           <div class="row">
             <div class="col">
               <span class="item-name">Alligator</span>
@@ -31,10 +51,10 @@
             </div><!--col-->
           </div><!--row-->
           <div class="row">
-              <small  class="item-desc">Who doesn't like alligators?</small>
+              <small class="item-desc" style="display: none;">Who doesn't like alligators?</small>
             </div><!--row-->
         </li>
-        <li class="list-group-item list-option">
+        <li class="list-group-item">
             <div class="row">
               <div class="col">
                 <span class="item-name">Crocodile</span>
@@ -44,10 +64,10 @@
               </div><!--col-->
             </div><!--row-->
             <div class="row">
-                <small class="item-desc">Crocodiles are fine I guess</small>
+                <small class="item-desc" style="display: none;">Crocodiles are fine I guess</small>
               </div><!--row-->
         </li>
-        <li class="list-group-item list-option">
+        <li class="list-group-item">
           <div class="row">
             <div class="col">
               <span class="item-name">Caiman</span>
@@ -57,11 +77,11 @@
             </div> <!--col-->
           </div><!--row-->
           <div class="row">
-            <small class="item-desc">Seriously? Caimans?</small>
+            <small class="item-desc" style="display: none;">Seriously? Caimans?</small>
           </div><!--row-->
         </li>
         <li class="list-group-item list-add-option">
-            <form id="create-option-form" method="POST" action="/polls">
+            <form id="create-option-form" method="POST" action="http://localhost:8080/polls">
               <div class="form-group row">
                   <input type="text" class="add-option-name form-control col" placeholder="Add an item">
                 <div class="col">
@@ -74,12 +94,15 @@
             </form>
           </li>
         </ul>
-        <form id="create-poll-form" method="POST" action="/polls">
+        <form id="create-poll-form" method="POST" action="http://localhost:8080/polls">
           <div class="button-submit">
             <button class="btn btn-success">Create poll!</button>
           </div>
         </form>
-      <% include partials/_footer.ejs%>
+      <footer>
+  © 2017 Prefegator
+</footer>
     </div>
-  </body>
-</html>
+  
+
+</body></html>
