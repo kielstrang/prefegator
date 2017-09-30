@@ -21,15 +21,18 @@ module.exports = (db) => {
         res.locals.poll = poll;
         res.locals.id = req.params.id;
         res.render('vote');
+      })
+      .catch((error) => {
+        if(!error.status) error.status = 500;
+        res.status(error.status).send(error.message);
       });
   });
 
   router.post("/:id", (req, res) => {
     const ballot = JSON.parse(req.body.ballot);
     db.saveBallot(req.params.id, ballot)
-      .then(() => {
-        res.redirect(`/polls/${req.params.id}/results`);
-      });
+      .then(() => res.redirect(`/polls/${req.params.id}/results`))
+      .catch();
   });
 
   router.get("/:id/links", (req, res) => {
@@ -38,6 +41,9 @@ module.exports = (db) => {
         res.locals.poll = poll;
         res.locals.id = req.params.id;
         res.render('links');
+      })
+      .catch((error) => {
+        res.status(404).send(error.message);
       });
   });
 
@@ -47,6 +53,9 @@ module.exports = (db) => {
         res.locals.poll = poll;
         res.locals.id = req.params.id;
         res.render('results');
+      })
+      .catch((error) => {
+        res.status(404).send(error.message);
       });
   });
 
