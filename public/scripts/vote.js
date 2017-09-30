@@ -11,7 +11,7 @@ $(function() {
     return true;
   });
   $('#sortable').sortable(); 
-  $('.item-desc').hide();
+  // $('.item-desc').hide();
 });
 
 // $('ol').on('click', '.list-group-item', function(event) {

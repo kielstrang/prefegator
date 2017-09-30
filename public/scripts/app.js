@@ -70,8 +70,14 @@ $(function() {
     $(event.currentTarget).find('small').slideToggle();
   });
 
-  $('ol').on('click', '.list-group-item', function(event) {
-    $(event.currentTarget).find('small').slideToggle();
+
+  $('ol').on('click touchstart', '.show-button', function(event) {
+    $(event.currentTarget).parent().parent().find('small').slideToggle();
+    // console.log(event.currentTarget);
   });
+    // }
+  
+  //   return false
+  // });
 
 });
