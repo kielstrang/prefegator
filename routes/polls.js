@@ -24,7 +24,6 @@ module.exports = (db) => {
       });
   });
 
-
   router.post("/:id", (req, res) => {
     const ballot = JSON.parse(req.body.ballot);
     db.saveBallot(req.params.id, ballot)
