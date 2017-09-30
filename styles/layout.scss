@@ -15,17 +15,19 @@ $color-shaded: #86CCBF;
     }
   }
 
+
+.fa {
+    color: $color-primary;
+}
+
 // Fixes bug between jquery-ui sortable and bootstrap
 .ui-sortable-placeholder {
     height: 50px;
 }
 
 .button-submit {
+    padding-bottom: 15px;
     padding-top: 15px;
-    justify-content: right;
-}
-.list-buttons {
-    color: $color-primary;
 }
 
 .starter-template {
@@ -37,12 +39,9 @@ $color-shaded: #86CCBF;
     border-radius: 0.5rem;
 }
 
-.submit-button {
-    padding-top: 15px;
-}
-
 .list-group-item {
     border-color: $color-primary;
+    margin: 5px 0;
 }
 
 .navbar {
@@ -73,4 +72,8 @@ body {
 
 textarea {
     resize: none;
+}
+
+footer {
+    color: $color-secondary;
 }

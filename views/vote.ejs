@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <% include partials/_head.ejs%>
+
+<head>
+  <% include partials/_head.ejs%>
     <script type="text/javascript" src="/scripts/vote.js"></script>
-  </head>
-  <body>
-    <% include partials/_header.ejs%>
-  <div class="container text-center">
-    <div class ="jumbotron">
-      <h1><%= poll.name %></h1>
-      <p><%= poll.desc %> </p>
-    </div>
-        <form id="vote-poll-form" method="POST" action=<%= `/polls/${id}` %>>
-          <div class="row">
-          <div class="col-sm-1">
-          <ol class="list-group">
-            <% for(const option in poll.options) { %>
-              <li class="list-group-item ui-state-default"><%= Number(option) + 1 %></li>
-            <% } %>
-          </ol>
-          </div>
-          <div class="col-sm-11">
-              <ol class="list-group" id="sortable">
-                <% for(const option of poll.options) { %>
-                  <li class="list-group-item ui-state-default">
-                    <div class="row">
-                      <div class="col">
-                        <span class="item ui-icon ui-icon-arrowthick-2-n-s" ><%= option.name %></span>
-                      </div>
-                    </div>
-                      <div class="row">
-                        <small class="item-desc ui-icon ui-icon-arrowthick-2-n-s"><%= option.desc %></small>
-                    </div>
-                  </li>
-                <% } %>
-              </ol>
+</head>
+
+<body>
+  <% include partials/_header.ejs%>
+    <div class="container text-center">
+      <div class="jumbotron text-left">
+        <h1>
+          <%= poll.name %>
+        </h1>
+        <p>
+          <%= poll.desc %>
+        </p>
+      </div>
+      <form id="vote-poll-form" method="POST" action=<%=` /polls/${id}` %>>
+        <h5>Rank your preferences in order:</h5>
+        <ol class="list-group" id="sortable">
+          <% for(const option of poll.options) { %>
+            <li class="list-group-item ui-state-default">
+              <div class="row">
+                <div class="col-10">
+                  <span class="item ui-icon ui-icon-arrowthick-2-n-s"><%= option.name %></span>
+                </div>
+                <div class="col-2">
+                  <i class="fa fa-caret-square-o-down"></i>
+                </div>
               </div>
-          </div>
-          <div class="button-submit">
-            <button class="submit btn btn-success">Vote!</button>
-          </div>
-        </form>
-        <% include partials/_footer.ejs%>
+              <div class="row">
+                <small class="item-desc ui-icon ui-icon-arrowthick-2-n-s"><%= option.desc %></small>
+              </div>
+            </li>
+            <% } %>
+        </ol>
+        <div class="button-submit">
+          <button class="submit btn btn-success">Vote!</button>
+        </div>
+      </form>
     </div>
-  </body>
+    <% include partials/_footer.ejs%>
+</body>
+
 </html>
