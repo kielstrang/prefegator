@@ -10,48 +10,48 @@ module.exports = (db) => {
     res.render('create');
   });
 
-  router.post("/", (req, res) => {
+  router.post("/", (req, res, next) => {
     const poll = JSON.parse(req.body.poll);
     db.createPoll(poll)
       .then(url => res.redirect(`/polls/${url}/links`))
-      .catch((error) => errors.handle(req, res, error));
+      .catch(next);
   });
 
-  router.get("/:id", (req, res) => {
+  router.get("/:id", (req, res, next) => {
     db.getPoll(req.params.id)
       .then(poll => {
         res.locals.poll = poll;
         res.locals.id = req.params.id;
         res.render('vote');
       })
-      .catch((error) => errors.handle(req, res, error));
+      .catch(next);
   });
 
-  router.post("/:id", (req, res) => {
+  router.post("/:id", (req, res, next) => {
     const ballot = JSON.parse(req.body.ballot);
     db.saveBallot(req.params.id, ballot)
       .then(() => res.redirect(`/polls/${req.params.id}/results`))
-      .catch((error) => errors.handle(req, res, error));
+      .catch(next);
   });
 
-  router.get("/:id/links", (req, res) => {
+  router.get("/:id/links", (req, res, next) => {
     db.getPoll(req.params.id)
       .then(poll => {
         res.locals.poll = poll;
         res.locals.id = req.params.id;
         res.render('links');
       })
-      .catch((error) => errors.handle(req, res, error));
+      .catch(next);
   });
 
-  router.get("/:id/results", (req, res) => {
+  router.get("/:id/results", (req, res, next) => {
     db.getPoll(req.params.id, 'sort')
       .then(poll => {
         res.locals.poll = poll;
         res.locals.id = req.params.id;
         res.render('results');
       })
-      .catch((error) => errors.handle(req, res, error));
+      .catch(next);
   });
 
   return router;
