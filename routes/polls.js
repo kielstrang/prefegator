@@ -1,6 +1,7 @@
 'use strict';
 
 const express = require('express');
+const errors = require('../lib/custom-errors.js');
 const router = express.Router();
 
 module.exports = (db) => {
@@ -12,7 +13,8 @@ module.exports = (db) => {
   router.post("/", (req, res) => {
     const poll = JSON.parse(req.body.poll);
     db.createPoll(poll)
-      .then(url => res.redirect(`/polls/${url}/links`));
+      .then(url => res.redirect(`/polls/${url}/links`))
+      .catch((error) => errors.handle(req, res, error));
   });
 
   router.get("/:id", (req, res) => {
@@ -22,17 +24,14 @@ module.exports = (db) => {
         res.locals.id = req.params.id;
         res.render('vote');
       })
-      .catch((error) => {
-        if(!error.status) error.status = 500;
-        res.status(error.status).send(error.message);
-      });
+      .catch((error) => errors.handle(req, res, error));
   });
 
   router.post("/:id", (req, res) => {
     const ballot = JSON.parse(req.body.ballot);
     db.saveBallot(req.params.id, ballot)
       .then(() => res.redirect(`/polls/${req.params.id}/results`))
-      .catch();
+      .catch((error) => errors.handle(req, res, error));
   });
 
   router.get("/:id/links", (req, res) => {
@@ -42,9 +41,7 @@ module.exports = (db) => {
         res.locals.id = req.params.id;
         res.render('links');
       })
-      .catch((error) => {
-        res.status(404).send(error.message);
-      });
+      .catch((error) => errors.handle(req, res, error));
   });
 
   router.get("/:id/results", (req, res) => {
@@ -54,9 +51,7 @@ module.exports = (db) => {
         res.locals.id = req.params.id;
         res.render('results');
       })
-      .catch((error) => {
-        res.status(404).send(error.message);
-      });
+      .catch((error) => errors.handle(req, res, error));
   });
 
   return router;
