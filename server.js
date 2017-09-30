@@ -15,7 +15,8 @@ const morgan = require('morgan');
 const knexLogger = require('knex-logger');
 const db = require('./lib/data-helpers.js')(knex);
 
-const pollsRoutes = require("./routes/polls");
+const pollsRoutes = require('./routes/polls');
+const errorHandler = require('./routes/error-handler.js');
 
 app.use(morgan('dev'));
 app.use(knexLogger(knex));
@@ -32,10 +33,12 @@ app.use(express.static("public"));
 
 app.use('/polls', pollsRoutes(db));
 
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
   res.redirect('/polls');
 });
 
+app.use(errorHandler);
+
 app.listen(PORT, () => {
-  console.log("Prefegator listening on port " + PORT);
+  console.log('Prefegator listening on port ' + PORT);
 });
