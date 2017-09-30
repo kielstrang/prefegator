@@ -34,8 +34,12 @@ module.exports = (db) => {
   });
 
   router.get("/:id/links", (req, res) => {
-    res.locals.id = req.params.id;
-    res.render('links');
+    db.getPoll(req.params.id)
+      .then(poll => {
+        res.locals.poll = poll;
+        res.locals.id = req.params.id;
+        res.render('links');
+      });
   });
 
   router.get("/:id/results", (req, res) => {
