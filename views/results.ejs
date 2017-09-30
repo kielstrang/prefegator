@@ -9,25 +9,28 @@
         <% include partials/_header.ejs%>
         <div class="container text-center">
           <div class="jumbotron welcome">
-            <h2>Poll name - Results:</h2>
-            <h4>Poll description</h4>
-            <p>Description of the thing that you were voting on.</p>
+            <h2><%= poll.name %> - Results:</h2>
+            <p><%= poll.desc %></p>
           </div><!--jumbotron welcome-->
             <ul class="list-group">
               <div class="list-group">
-                <li class="list-group-item list-group-item-action flex-column align-items-start winner">
-                  <div class="d-flex w-100 justify-content-between">
-                    <h5>Rank: 1</h5>
-                    <h4 class="mb-1">Winner! Alligator</h4>
-                    <h5 class="mb-1">(Your rank)</h5>
-                  </div>
-                  <div class="d-flex w-100 pt-3">
-                    <p>Description of the thing that won.</p>
-                  </div>
-                </li>
+              <% poll.options.forEach(function(option, index)  { %>
+                <% if(index === 0) { %>
+                  <li class="list-group-item list-group-item-action flex-column align-items-start winner">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5>Rank: 1</h5>
+                        <h4 class="mb-1"><%= option.name %></h4>
+                        <h5 class="mb-1">(Your rank)</h5>
+                      </div>
+                      <div class="d-flex w-100 pt-3">
+                        <p><%= option.desc %></p>
+                      </div>
+                    </li>
+                  <% } else { %>
+                    <li class="list-group-item"><%= `${index + 1}. ${option.name}` %></li>
+                  <% } %>
+              <% }) %>
               </div>
-              <li class="list-group-item">2. Crocodile</li>
-              <li class="list-group-item">3. Caiman</li>
             </ul>
           <% include partials/_footer.ejs%>
         </div>

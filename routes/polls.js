@@ -51,7 +51,6 @@ module.exports = (db) => {
   router.get("/:id/results", (req, res) => {
     db.getPoll(req.params.id, 'sort')
       .then(poll => {
-        console.log(poll);
         res.locals.poll = poll;
         res.locals.id = req.params.id;
         res.render('results');

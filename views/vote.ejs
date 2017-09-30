@@ -8,9 +8,7 @@
     <% include partials/_header.ejs%>
   <div class="container text-center page-content">
     <h1><%= poll.name %></h1>
-    <div>
-      <%= poll.desc %>
-    </div>
+    <p><%= poll.desc %> </p>
       <div class="container">
         <form id="vote-poll-form" method="POST" action=<%= `/polls/${id}` %>>
           <ul class="list-group" id="sortable">
