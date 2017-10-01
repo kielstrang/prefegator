@@ -86,8 +86,9 @@ $(function() {
           text:  'Poll Description too long, please make it shorter',
           icon:  'error'
         });
-        event.preventDefault();
-        return;
+        event.preventDefault(); //a return after seems redundant but 
+                                //phone requests somehow went through otherwise.
+        return;                 //will investigate on Sunday.
     } else {
         var poll = {
           name: $('#poll-name').val(),
