@@ -1,5 +1,5 @@
 $(function() {
-  
+  // sessionStorage.clear();
   $('.add-option').on('click', function() {
     $('#create-option-form').submit();
   });
@@ -107,7 +107,9 @@ $(function() {
         .attr('name', 'poll')
         .attr('value', JSON.stringify(poll))
         .appendTo($('#create-poll-form'));
-        return true;  
+        return true;
+
+        
     }
   });
   
@@ -134,5 +136,4 @@ $(function() {
   } else {
     $('.item-desc').hide();
   }
-
 });

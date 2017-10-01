@@ -1,15 +1,18 @@
 $(function() {
   $('#sortable').sortable(); 
+  
   $('#vote-poll-form').on('submit', function(event) {
-    var $voterName = $('#voter-name').val();
-    if ($voterName === '') {
-      swal({
-        title: 'Chomp!',
-        text:  'You need to provide a name/alias/callsign',
-        icon:  'warning'
-      });
-      event.preventDefault();
-    } else {
+    if ($('#voter-name')) {
+      var $voterName = $('#voter-name').val();
+      if ($voterName === '') {
+        swal({
+          title: 'Chomp!',
+          text:  'You need to provide a name/alias/callsign',
+          icon:  'warning'
+        });
+        event.preventDefault();
+      }
+    };
       var ballot = {
        votername: $('#voter-name').val(),
        votes: []
@@ -22,12 +25,5 @@ $(function() {
         .attr('value', JSON.stringify(ballot))
         .appendTo($('#vote-poll-form'));
       return true;
-    };
-  });
-  
-  if ($('#voterCheckBox').prop('checked')) {
-    $("#voter-name").show();
-  } else {
-    $("#voter-name").hide();
-  }
+    });
 });
