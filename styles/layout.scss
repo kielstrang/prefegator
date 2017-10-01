@@ -72,6 +72,7 @@ body {
 .navbar {
     background-color: $color-primary;
     justify-content: center;
+    max-height: 50px;
     
     .navbar-brand{
         color: $color-secondary;
@@ -116,4 +117,11 @@ body {
 
 .voting-list {
     background-color: $grey-background;
+}
+
+.gator {
+    fill: black;
+    height: 50px;
+    width: 50px;
+
 }
