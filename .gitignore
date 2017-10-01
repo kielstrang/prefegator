@@ -7,3 +7,4 @@ public/styles
 views/testingClassNames.ejs
 .vscode/
 .eslintrc.js
+.DS_Store
