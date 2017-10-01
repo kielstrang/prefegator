@@ -9,9 +9,9 @@
    viewBox="0 0 26.821693 40.108097"
    version="1.1">
   <style>
-    .gator {
-      fill: green;
-    }
+  .gator {
+    fill: #335a3c;
+  }
   </style>
   <g
      transform="translate(-49.880307,-3.5115564)">
