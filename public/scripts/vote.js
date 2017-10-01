@@ -1,6 +1,6 @@
 $(function() {
-  $('#sortable').sortable(); 
-  
+  $('#sortable').sortable();
+
   $('#vote-poll-form').on('submit', function(event) {
     if ($('#voter-name')) {
       var $voterName = $('#voter-name').val();
@@ -11,6 +11,7 @@ $(function() {
           icon:  'warning'
         });
         event.preventDefault();
+        return;
       }
     };
     var ballot = {
