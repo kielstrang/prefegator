@@ -21,7 +21,7 @@
                       <div class="d-flex w-100 justify-content-between">
                         <h5>Rank: 1</h5>
                         <h4 class="mb-1"><%= option.name %></h4>
-                        <h5 class="mb-1">(Your rank)</h5>
+                        <h5 class="mb-1">Votes: <%= option.count%></h5>
                       </div>
                       <div class="d-flex w-100 pt-3">
                           <small class="mb-1 r1-desc item-desc"><%= option.desc %></small>
@@ -32,7 +32,7 @@
                       <div class="d-flex w-100 justify-content-between">
                           <h6 class="mb-1"><%= `Rank: ${index + 1}` %></h4>
                             <h5 class="mb-1"><%= option.name %></h4>
-                          <h6 class="mb-1">(Your rank)</h5>
+                          <h6 class="mb-1">Votes: <%= option.count%></h5>
                         </div>
                         <div class="d-flex w-100 pt-3">
                             <small class="mb-1 item-desc"><%= option.desc %></small>
