@@ -8,21 +8,17 @@
 <body>
   <% include partials/_header.ejs%>
     <div class="container">
-      <div class="jumbotron">
-        <div class="text-center">
-          <h2>Poll Created!</h2>
-        </div>
-          <div class="alert alert-success text-center">
-            <h4 class="alert-heading">
-              <%= poll.name %>
-            </h4>
-            <p class="mb-0">Here is your link to the voting page. Share it with your friends!</p>
-            <h5 class="mb-2"><a href=<%=` /polls/${id}` %>>Voting page</a></h5>
+      <div class="alert alert-success text-center">
+        <h2>Poll Created!</h2>
+        <h4 class="alert-heading">
+          <%= poll.name %>
+        </h4>
+        <p class="mb-0">Here is your link to the voting page. Share it with your friends!</p>
+        <h5 class="mb-2"><a href=<%=` /polls/${id}` %>>Voting page</a></h5>
 
-            <p class="mb-0">Use this link to view the results:</p>
-            <h5 class="mb-3"><a href=<%=` /polls/${id}/results` %>>Results page</a></h5>
-            <small>These links were also sent to you at <a href="mailto:<%= poll.email %>"><%= poll.email %></a></small>
-          </div>
+        <p class="mb-0">Use this link to view the results:</p>
+        <h5 class="mb-3"><a href=<%=` /polls/${id}/results` %>>Results page</a></h5>
+        <small>These links were also sent to you at <a href="mailto:<%= poll.email %>"><%= poll.email %></a></small>
       </div>
     </div>
     <% include partials/_footer.ejs%>

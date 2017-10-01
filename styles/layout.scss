@@ -3,6 +3,8 @@ $color-primary: #4C6B2B;
 $color-secondary: #F8FCFF;
 $color-bg: #4A7069;
 $color-shaded: #86CCBF;
+$color-hightlight: #d4edda;
+$grey-background: #e9ecef;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 // Results page
@@ -44,7 +46,8 @@ body {
     }
     
     .jumbotron {
-        padding: 2rem 1rem;
+        padding: 1rem 1rem;
+        margin-bottom: 1rem;
     }
     
     .links-section {
@@ -79,12 +82,12 @@ body {
     color: $color-secondary;
 }
 
-<<<<<<< HEAD
 // Fixes bug between jquery-ui sortable and bootstrap
 .ui-sortable-placeholder {
     height: 50px;
 }
-=======
+
+// Sweet Alert styles
 .swal-button {
     padding: 7px 19px;
     border-radius: 2px;
@@ -100,4 +103,17 @@ body {
     // font-size: 16px;
     // box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
   }
->>>>>>> master
+
+
+.calendar-text {
+    color: $color-primary;
+    margin-top: -0.2rem;
+}
+
+.winner {
+    background-color: $color-hightlight;
+}
+
+.voting-list {
+    background-color: $grey-background;
+}

@@ -9,33 +9,40 @@
 <body>
   <% include partials/_header.ejs%>
     <div class="container text-center">
-      <div class="jumbotron text-left">
-        <h1>
+      <div class="jumbotron text-center">
+        <h2 class="text-center">
           <%= poll.name %>
-        </h1>
-        <p>
+        </h2>
+        <h6>A poll from
+          <a href="mailto:<%= poll.email %>">
+            <%= poll.email %>
+          </a>
+        </h6>
+        <p class="pt-3">
           <%= poll.desc %>
         </p>
       </div>
       <form id="vote-poll-form" method="POST" action=<%=` /polls/${id}` %>>
         <h5>Rank your preferences in order:</h5>
-        <ol class="list-group" id="sortable">
-          <% for(const option of poll.options) { %>
-            <li class="list-group-item ui-state-default">
-              <div class="row">
-                <div class="col-10">
-                  <span class="item ui-icon ui-icon-arrowthick-2-n-s"><%= option.name %></span>
+        <div class="voting-list rounded p-2">
+          <ol class="list-group" id="sortable">
+            <% for(const option of poll.options) { %>
+              <li class="list-group-item ui-state-default">
+                <div class="row">
+                  <div class="col-10">
+                    <span class="item ui-icon ui-icon-arrowthick-2-n-s"><%= option.name %></span>
+                  </div>
+                  <div class="col-2 show-button">
+                    <i class="fa fa-caret-square-o-down"></i>
+                  </div>
                 </div>
-                <div class="col-2 show-button">
-                  <i class="fa fa-caret-square-o-down"></i>
+                <div class="row">
+                  <small class="item-desc ui-icon ui-icon-arrowthick-2-n-s"><%= option.desc %></small>
                 </div>
-              </div>
-              <div class="row">
-                <small class="item-desc ui-icon ui-icon-arrowthick-2-n-s"><%= option.desc %></small>
-              </div>
-            </li>
-            <% } %>
-        </ol>
+              </li>
+              <% } %>
+          </ol>
+        </div>
         <div class="button-submit">
           <button class="submit btn btn-success">Vote!</button>
         </div>
