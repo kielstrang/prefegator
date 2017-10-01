@@ -117,16 +117,17 @@ $(function() {
    })
 
 
-   // Description toggle functionality
+   // Description toggle create page
   $('ul').on('click', '.list-group-item', function(event) {
     $(event.currentTarget).find('small').slideToggle();
   });
 
-
+  // Description toggle on vote page
   $('ol').on('click touchstart', '.show-button', function(event) {
     $(event.currentTarget).parent().parent().find('small').slideToggle();
   });
 
+  // Item description default status conditional
   var currentUrl = window.location.href;
   if (currentUrl.indexOf('polls') === currentUrl.length - 5) {
     $('.item-desc').show();

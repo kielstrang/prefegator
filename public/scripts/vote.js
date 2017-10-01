@@ -12,10 +12,10 @@ $(function() {
     } else {
       var ballot = {
        votername: $('#voter-name').val(),
-       options: []
+       votes: []
       };
       $('.item').each(function(i, item) {
-        ballot.options.push($(item).text());
+        ballot.votes.push($(item).text());
       });
       $('<input>').attr('type', 'hidden')
         .attr('name', 'ballot')
@@ -24,24 +24,10 @@ $(function() {
       return true;
     };
   });
+  
+  if ($('#voterCheckBox').prop('checked')) {
+    $("#voter-name").show();
+  } else {
+    $("#voter-name").hide();
+  }
 });
-
-
-// var poll = {
-//   name: $('#poll-name').val(),
-//   email: $('#email').val(),
-//   desc: $('#poll-desc').val(),
-//   options: []
-// };
-
-// $('.list-option').each((i, item) => {
-//   poll.options.push({ name: $(item).find('.item-name').text(),
-//                       desc: $(item).find('.item-desc').text()
-//                     });
-// });
-
-// $('<input>').attr('type', 'hidden')
-// .attr('name', 'poll')
-// .attr('value', JSON.stringify(poll))
-// .appendTo($('#create-poll-form'));
-// return true;  
