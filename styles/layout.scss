@@ -6,11 +6,9 @@ $color-shaded: #86CCBF;
 $color-hightlight: #d4edda;
 $grey-background: #e9ecef;
 
-@import "../node_modules/bootstrap/scss/bootstrap";
-// Results page
-// @import "./results";
 
-// Create page
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 @media (min-width: 992px) {
     .container {
         width: 750px;
@@ -88,6 +86,10 @@ body {
     }
 }
 
+.footer{
+    max-height: 40px;
+    color: $color-secondary;
+}
 
 // Fixes bug between jquery-ui sortable and bootstrap
 .ui-sortable-placeholder {
@@ -111,7 +113,3 @@ body {
     // box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
   }
 
-.footer{
-    max-height: 40px;
-    color: $color-secondary;
-}

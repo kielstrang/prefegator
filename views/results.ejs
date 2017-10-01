@@ -8,9 +8,9 @@
 
 <body>
   <% include partials/_header.ejs%>
-    <div class="container">
-      <div class="jumbotron text-left">
-        <h2 class="text-center">Results:</h2>
+    <div class="container text-center">
+      <div class="jumbotron">
+        <h2>Results:</h2>
         <h4>
           <%= poll.name %>
         </h4>
@@ -18,7 +18,6 @@
           <%= poll.desc %>
         </p>
       </div>
-      <!--jumbotron-->
       <ul class="list-group">
         <div class="list-group">
           <% poll.options.forEach(function(option, index)  { %>

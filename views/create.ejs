@@ -8,6 +8,8 @@
 <body>
   <% include partials/_header.ejs%>
     <div class="container text-center">
+      
+      <!-- Welcome -->
       <div class="jumbotron">
         <h4>The web's premier alligator-based preference aggregator</h4>
         <p>Having trouble deciding on what to do? Try Prefegator and let your friends help you</p>
@@ -21,7 +23,8 @@
           <textarea class="form-control col-8" rows="3" id="poll-desc" placeholder="Briefly describe your poll"></textarea>
         </div>
       </div>
-      <!-- jumbotron -->
+      
+      <!-- Add poll options -->
       <h5>Choose your options:</h5>
       <ul class="list-group">
 
@@ -33,13 +36,13 @@
                 <i class="list-buttons fa fa-plus-square-o fa-2x add-option"></i>
               </div>
             </div>
-            <!--row-->
             <div class="row">
               <input type="text" class=" add-option-desc form-control col-6" placeholder="Add a description (optional)">
             </div>
           </form>
         </li>
       </ul>
+      <!-- Submission -->
       <form id="create-poll-form" method="POST" action="/polls">
         <div class="button-submit">
           <button class="btn btn-success">Create poll!</button>
