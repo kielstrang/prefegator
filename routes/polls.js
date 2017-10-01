@@ -18,23 +18,21 @@ module.exports = (db) => {
   });
 
   router.get("/:id", (req, res, next) => {
-    if (req.session.voter_id === req.params.id) {
+    if(req.session.voter_id === req.params.id) {
       res.redirect(`/polls/${req.params.id}/results`);
     } else {
-    db.getPoll(req.params.id)
-      .then(poll => {
-        res.locals.poll = poll;
-        res.locals.id = req.params.id;
-        res.render('vote');
-      })
-      .catch(next);
+      db.getPoll(req.params.id)
+        .then(poll => {
+          res.locals.poll = poll;
+          res.locals.id = req.params.id;
+          res.render('vote');
+        })
+        .catch(next);
     };
   });
 
   router.post("/:id", (req, res, next) => {
-    const voterId = req.params.id;
-    req.session.voter_id = voterId;
-
+    req.session.voter_id = req.params.id;
     const ballot = JSON.parse(req.body.ballot);
     db.saveBallot(req.params.id, ballot)
       .then(() => res.redirect(`/polls/${req.params.id}/results`))
