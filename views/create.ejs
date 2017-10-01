@@ -1,85 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Prefegator</title>
-    <% include partials/_head.ejs%>
-  </head>
-  <body>
-    <% include partials/_header.ejs%>
+
+<head>
+  <title>Prefegator</title>
+  <% include partials/_head.ejs%>
+</head>
+
+<body>
+  <% include partials/_header.ejs%>
     <div class="container text-center">
-      <div class="jumbotron welcome">
+      <div class="jumbotron">
         <h4>The web's premier alligator-based preference aggregator</h4>
         <p>Having trouble deciding on what to do? Try Prefegator and let your friends help you</p>
-          <div class="form-group row">
-            <input type="email" class="form-control col-8" id="email" placeholder="Your email">
-          </div>
-          <div class="form-group row">
-            <input type="text" class="form-control col-8" id="poll-name" placeholder="Name your query">
-          </div>
-          <div class="form-group row poll-description">
-              <textarea class="form-control col-8" rows="3" id="poll-desc" placeholder="Briefly describe what you would like to decide on"></textarea>
-          </div>
-    </div><!--jumbotron welcome-->
+        <div class="form-group row">
+          <input type="email" class="form-control col-8" id="email" placeholder="Your email">
+        </div>
+        <div class="form-group row">
+          <input type="text" class="form-control col-8" id="poll-name" placeholder="Name your query">
+        </div>
+        <div class="form-group row poll-description">
+          <textarea class="form-control col-8" rows="3" id="poll-desc" placeholder="Briefly describe what you would like to decide on"></textarea>
+        </div>
+      </div>
+      <!--jumbotron welcome-->
+      <h5>Choose your options:</h5>
       <ul class="list-group">
         <li class="list-group-item list-option">
           <div class="row">
             <div class="col">
               <span class="item-name">Alligator</span>
-            </div><!--col-->
+            </div>
+            <!--col-->
             <div class="col">
               <i class="list-buttons fa fa-minus-square-o fa-2x delete-option"></i>
-            </div><!--col-->
-          </div><!--row-->
+            </div>
+            <!--col-->
+          </div>
+          <!--row-->
           <div class="row">
-              <small  class="item-desc">Who doesn't like alligators?</small>
-            </div><!--row-->
+            <small class="item-desc">Who doesn't like alligators?</small>
+          </div>
+          <!--row-->
         </li>
         <li class="list-group-item list-option">
-            <div class="row">
-              <div class="col">
-                <span class="item-name">Crocodile</span>
-              </div><!--col-->
-              <div class="col">
-                <i class="list-buttons fa fa-minus-square-o fa-2x delete-option"></i>
-              </div><!--col-->
-            </div><!--row-->
-            <div class="row">
-                <small class="item-desc">Crocodiles are fine I guess</small>
-              </div><!--row-->
+          <div class="row">
+            <div class="col">
+              <span class="item-name">Crocodile</span>
+            </div>
+            <!--col-->
+            <div class="col">
+              <i class="list-buttons fa fa-minus-square-o fa-2x delete-option"></i>
+            </div>
+            <!--col-->
+          </div>
+          <!--row-->
+          <div class="row">
+            <small class="item-desc">Crocodiles are fine I guess</small>
+          </div>
+          <!--row-->
         </li>
         <li class="list-group-item list-option">
           <div class="row">
             <div class="col">
               <span class="item-name">Caiman</span>
-            </div><!--col-->
+            </div>
+            <!--col-->
             <div class="col">
               <i class="list-buttons fa fa-minus-square-o fa-2x delete-option"></i>
-            </div> <!--col-->
-          </div><!--row-->
+            </div>
+            <!--col-->
+          </div>
+          <!--row-->
           <div class="row">
             <small class="item-desc">Seriously? Caimans?</small>
-          </div><!--row-->
+          </div>
+          <!--row-->
         </li>
         <li class="list-group-item list-add-option">
-            <form id="create-option-form" method="POST" action="/polls">
-              <div class="form-group row">
-                  <input type="text" class="add-option-name form-control col" placeholder="Add an item">
-                <div class="col">
-                    <i class="list-buttons fa fa-plus-square-o fa-2x add-option"></i>
-                </div><!--col-->
-              </div><!--row-->
-              <div class="row">
-                <input type="text" class=" add-option-desc form-control col-6" placeholder="Add a description (optional)">
+          <form id="create-option-form" method="POST" action="/polls">
+            <div class="form-group row">
+              <input type="text" class="add-option-name form-control col" placeholder="Add an item">
+              <div class="col">
+                <i class="list-buttons fa fa-plus-square-o fa-2x add-option"></i>
               </div>
-            </form>
-          </li>
-        </ul>
-        <form id="create-poll-form" method="POST" action="/polls">
-          <div class="button-submit">
-            <button class="btn btn-success">Create poll!</button>
-          </div>
-        </form>
-      </div>
-      <% include partials/_footer.ejs%>
-  </body>
+              <!--col-->
+            </div>
+            <!--row-->
+            <div class="row">
+              <input type="text" class=" add-option-desc form-control col-6" placeholder="Add a description (optional)">
+            </div>
+          </form>
+        </li>
+      </ul>
+      <form id="create-poll-form" method="POST" action="/polls">
+        <div class="button-submit">
+          <button class="btn btn-success">Create poll!</button>
+        </div>
+      </form>
+    </div>
+    <% include partials/_footer.ejs%>
+</body>
+
 </html>

@@ -1,48 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <% include partials/_head.ejs%>
+
+<head>
+  <% include partials/_head.ejs%>
     <script type="text/javascript" src="/scripts/results.js"></script>
-  </head>
+</head>
 
+<body>
+  <% include partials/_header.ejs%>
+    <div class="container">
+      <div class="jumbotron text-left">
+        <h2 class="text-center">Results:</h2>
+        <h4>
+          <%= poll.name %>
+        </h4>
+        <p class="pt-2">
+          <%= poll.desc %>
+        </p>
+      </div>
+      <!--jumbotron-->
+      <ul class="list-group">
+        <div class="list-group">
+          <% poll.options.forEach(function(option, index)  { %>
+            <% if(index === 0) { %>
 
-    <body>
-        <% include partials/_header.ejs%>
-        <div class="container">
-          <div class="jumbotron welcome text-left">
-            <h2><%= poll.name %> - Results:</h2>
-            <p><%= poll.desc %></p>
-          </div><!--jumbotron welcome-->
-            <ul class="list-group">
-              <div class="list-group">
-              <% poll.options.forEach(function(option, index)  { %>
-                <% if(index === 0) { %>
-                  <li class="list-group-item list-group-item-action flex-column align-items-start winner">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5>Rank: 1</h5>
-                        <h4 class="mb-1"><%= option.name %></h4>
-                        <h5 class="mb-1">Votes: <%= option.count%></h5>
-                      </div>
-                      <div class="d-flex w-100 pt-3">
-                          <small class="mb-1 r1-desc item-desc"><%= option.desc %></small>
-                      </div>
-                    </li>
-                  <% } else { %>
-                    <li class="list-group-item">
-                      <div class="d-flex w-100 justify-content-between">
-                          <h6 class="mb-1"><%= `Rank: ${index + 1}` %></h4>
-                            <h5 class="mb-1"><%= option.name %></h4>
-                          <h6 class="mb-1">Votes: <%= option.count%></h5>
-                        </div>
-                        <div class="d-flex w-100 pt-3">
-                            <small class="mb-1 item-desc"><%= option.desc %></small>
-                        </div>
-                    </li>
-                  <% } %>
-              <% }) %>
-              </div>
-            </ul>
-          </div>
-          <% include partials/_footer.ejs%>
-      </body>
+              <li class="list-group-item list-group-item-action flex-column align-items-start winner">
+                <div class="d-flex w-100 justify-content-between">
+                  <span class="fa-stack fa-2x">
+                              <i class="fa fa-square-o fa-stack-2x"></i>
+                              <strong class="fa-stack-1x calendar-text">1</strong>
+                            </span>
+                  <h4 class="mb-1">
+                    <%= option.name %>
+                  </h4>
+                  <h5 class="mb-1">Votes:
+                    <%= option.count%>
+                  </h5>
+                </div>
+                <div class="d-flex justify-content-center w-100 pt-3">
+                  <p class="mb-1 r1-desc item-desc">
+                    <%= option.desc %>
+                  </p>
+                </div>
+              </li>
+              <% } else { %>
+                <li class="list-group-item">
+                  <div class="d-flex w-100 justify-content-between">
+                    <span class="fa-stack fa-2x">
+                              <i class="fa fa-square-o fa-stack-2x"></i>
+                              <strong class="fa-stack-1x calendar-text"><%= `${index + 1}` %></strong>
+                            </span>
+                    <h5 class="mb-1">
+                      <%= option.name %>
+                        </h4>
+                        <h6 class="mb-1">Votes:
+                          <%= option.count%>
+                    </h5>
+                  </div>
+                  <div class="d-flex justify-content-center w-100 pt-3">
+                    <small class="mb-1 item-desc"><%= option.desc %></small>
+                  </div>
+                </li>
+                <% } %>
+                  <% }) %>
+        </div>
+      </ul>
+      <div class="button-submit text-center">
+        <a href="/"><button class="submit btn btn-success">Create a new poll!</button></a>
+      </div>
+    </div>
+    <% include partials/_footer.ejs%>
+</body>
+
 </html>

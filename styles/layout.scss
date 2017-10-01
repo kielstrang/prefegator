@@ -3,25 +3,84 @@ $color-primary: #4C6B2B;
 $color-secondary: #F8FCFF;
 $color-bg: #4A7069;
 $color-shaded: #86CCBF;
+$color-hightlight: #d4edda;
+$grey-background: #e9ecef;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 // Results page
-@import "./results";
+// @import "./results";
 
 // Create page
 @media (min-width: 992px) {
     .container {
-      width: 750px;
+        width: 750px;
     }
-  }
-
-
-.links-section {
-    padding-top: 1rem;
 }
 
-.fa {
-    color: $color-primary;
+body {
+    background-color: $color-bg;
+    
+    textarea {
+        resize: none;
+    }
+}
+
+
+.container {
+    background-color: $color-secondary;
+    min-height: 100vh;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    
+    .button-submit {
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    
+    .form-group {
+        justify-content: center;
+        
+        .form-control {
+            border-radius: 0.5rem;
+        }
+    }
+    
+    .jumbotron {
+        padding: 1rem 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .links-section {
+        padding-top: 1rem;
+    }
+    
+    .list-group-item {
+        border-color: $color-primary;
+        margin: 5px 0;
+        
+        .winner {
+            background-color: $color-primary;
+            color: $color-secondary;
+        }
+    }
+    
+    .fa {
+        color: $color-primary;
+    }
+}
+
+.navbar {
+    background-color: $color-primary;
+    justify-content: center;
+    max-height: 50px;
+    
+    .navbar-brand{
+        color: $color-secondary;
+    }
+}
+
+.footer {
+    color: $color-secondary;
 }
 
 // Fixes bug between jquery-ui sortable and bootstrap
@@ -29,60 +88,7 @@ $color-shaded: #86CCBF;
     height: 50px;
 }
 
-.button-submit {
-    padding-bottom: 15px;
-    padding-top: 15px;
-}
-
-.starter-template {
-    padding: 3rem 1.5rem;
-    text-align: center;
-}
-
-.form-control {
-    border-radius: 0.5rem;
-}
-
-.list-group-item {
-    border-color: $color-primary;
-    margin: 5px 0;
-}
-
-.navbar {
-    background-color: $color-primary;
-    justify-content: center;
-    .navbar-brand{
-        color: $color-secondary;
-    }
-}
-    
-.container {
-    background-color: $color-secondary;
-    min-height: 100vh;
-    padding-top: 75px;
-    padding-bottom: 75px;
-}
-
-.jumbotron {
-    padding: 2rem 1rem;
-}
-
-.form-group {
-    justify-content: center;
-}
-
-body {
-    background-color: $color-bg;
-}
-
-textarea {
-    resize: none;
-}
-
-.footer {
-    color: $color-secondary;
-}
-
+// Sweet Alert styles
 .swal-button {
     padding: 7px 19px;
     border-radius: 2px;
@@ -98,3 +104,24 @@ textarea {
     // font-size: 16px;
     // box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
   }
+
+
+.calendar-text {
+    color: $color-primary;
+    margin-top: -0.2rem;
+}
+
+.winner {
+    background-color: $color-hightlight;
+}
+
+.voting-list {
+    background-color: $grey-background;
+}
+
+.gator {
+    fill: black;
+    height: 50px;
+    width: 50px;
+
+}
