@@ -17,6 +17,9 @@
         <p class="pt-2">
           <%= poll.desc %>
         </p>
+        <p class="pt-2">
+          <%= poll.voteCount %> total voters.  Results calculated using <a href="https://en.wikipedia.org/wiki/Instant-runoff_voting">Instant Runoff Voting</a>
+        </p>
       </div>
       <!--jumbotron-->
       <ul class="list-group">
@@ -33,7 +36,7 @@
                   <h4 class="mb-1">
                     <%= option.name %>
                   </h4>
-                  <h5 class="mb-1">Votes:
+                  <h5 class="mb-1">Support:
                     <%= option.count%>
                   </h5>
                 </div>
@@ -53,7 +56,7 @@
                     <h5 class="mb-1">
                       <%= option.name %>
                         </h4>
-                        <h6 class="mb-1">Votes:
+                        <h6 class="mb-1">Support:
                           <%= option.count%>
                     </h5>
                   </div>
