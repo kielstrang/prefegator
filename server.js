@@ -7,6 +7,7 @@ const ENV = process.env.ENV || "development";
 const express = require("express");
 const bodyParser = require("body-parser");
 const sass = require("node-sass-middleware");
+const cookieSession = require('cookie-session');
 const app = express();
 
 const knexConfig = require("./knexfile");
@@ -21,6 +22,11 @@ const errorHandler = require('./routes/error-handler.js');
 app.use(morgan('dev'));
 app.use(knexLogger(knex));
 
+app.use(cookieSession({
+  name: 'session',
+  keys: [process.env.SESSION_SECRET || 'development']
+}));
+
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/styles", sass({
@@ -29,8 +35,9 @@ app.use("/styles", sass({
   debug: true,
   outputStyle: 'expanded'
 }));
-app.use(express.static("public"));
 
+
+app.use(express.static("public"));
 app.use('/polls', pollsRoutes(db));
 
 app.get('/', (req, res) => {
