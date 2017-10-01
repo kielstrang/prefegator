@@ -13,17 +13,17 @@ $(function() {
         event.preventDefault();
       }
     };
-      var ballot = {
-       votername: $('#voter-name').val(),
-       votes: []
-      };
-      $('.item').each(function(i, item) {
-        ballot.votes.push($(item).text());
-      });
-      $('<input>').attr('type', 'hidden')
-        .attr('name', 'ballot')
-        .attr('value', JSON.stringify(ballot))
-        .appendTo($('#vote-poll-form'));
-      return true;
+    var ballot = {
+      voter_name: $('#voter-name').val(),
+      votes: []
+    };
+    $('.item').each(function(i, item) {
+      ballot.votes.push($(item).text());
     });
+    $('<input>').attr('type', 'hidden')
+      .attr('name', 'ballot')
+      .attr('value', JSON.stringify(ballot))
+      .appendTo($('#vote-poll-form'));
+    return true;
+  });
 });

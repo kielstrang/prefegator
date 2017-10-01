@@ -94,6 +94,7 @@ $(function() {
           name: $('#poll-name').val(),
           email: $('#email').val(),
           desc: $('#poll-desc').val(),
+          require_name: $('#voterCheckBox').is(':checked'),
           options: []
         };
         
@@ -109,7 +110,6 @@ $(function() {
         .appendTo($('#create-poll-form'));
         return true;
 
-        
     }
   });
   
