@@ -1,5 +1,5 @@
 $(function() {
-  
+  // sessionStorage.clear();
   $('.add-option').on('click', function() {
     $('#create-option-form').submit();
   });
@@ -94,6 +94,7 @@ $(function() {
           name: $('#poll-name').val(),
           email: $('#email').val(),
           desc: $('#poll-desc').val(),
+          require_name: $('#voterCheckBox').is(':checked'),
           options: []
         };
         
@@ -107,7 +108,8 @@ $(function() {
         .attr('name', 'poll')
         .attr('value', JSON.stringify(poll))
         .appendTo($('#create-poll-form'));
-        return true;  
+        return true;
+
     }
   });
   
@@ -134,5 +136,4 @@ $(function() {
   } else {
     $('.item-desc').hide();
   }
-
 });
