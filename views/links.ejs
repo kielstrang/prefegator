@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <% include partials/_head.ejs%>
-  </head>
-  <body>
-    <% include partials/_header.ejs%>
 
-    <div class="container text-center">
-      <h2><%= poll.name %></h2>
-      <h4>Poll Created!</h4>
-    <div>
-      <a href=<%= `/polls/${id}` %>>Voting link</a>
-      <p> Send this link to your friends so they can vote!</p>
+<head>
+  <% include partials/_head.ejs%>
+</head>
+
+<body>
+  <% include partials/_header.ejs%>
+    <div class="container">
+      <div class="jumbotron">
+        <div class="text-center">
+          <h2>Poll Created!</h2>
+        </div>
+          <div class="alert alert-success text-center">
+            <h4 class="alert-heading">
+              <%= poll.name %>
+            </h4>
+            <p class="mb-0">Here is your link to the voting page. Share it with your friends!</p>
+            <h5 class="mb-2"><a href=<%=` /polls/${id}` %>>Voting page</a></h5>
+
+            <p class="mb-0">Use this link to view the results:</p>
+            <h5 class="mb-3"><a href=<%=` /polls/${id}/results` %>>Results page</a></h5>
+            <small>These links were also sent to you at <a href="mailto:<%= poll.email %>"><%= poll.email %></a></small>
+          </div>
+      </div>
     </div>
-    <div>
-      <a href=<%= `/polls/${id}/results` %>>Results</a>
-      <p> Use this link to see the voting result.</p>
-    </div>
-    <div>
-      These links were also sent to you at
-      <a href="mailto:<%= poll.email %>"><%= poll.email %></a>
-    </div>
-    <div>
-      The poll will expire in x amount of time.
-    </div>
-  </div>
     <% include partials/_footer.ejs%>
 </body>
+
 </html>

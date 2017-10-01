@@ -16,6 +16,10 @@ $color-shaded: #86CCBF;
   }
 
 
+.links-section {
+    padding-top: 1rem;
+}
+
 .fa {
     color: $color-primary;
 }
@@ -56,9 +60,10 @@ $color-shaded: #86CCBF;
     background-color: $color-secondary;
     min-height: 100vh;
     padding-top: 75px;
+    padding-bottom: 75px;
 }
 
-.welcome {
+.jumbotron {
     padding: 2rem 1rem;
 }
 
@@ -74,6 +79,6 @@ textarea {
     resize: none;
 }
 
-footer {
+.footer {
     color: $color-secondary;
 }
