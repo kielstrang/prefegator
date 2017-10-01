@@ -17,7 +17,13 @@ exports.seed = function(knex, Promise) {
       return db.createPoll(poll);
     })
     .then(() => {
-      const ballot = ["Alligator", "Caiman", "Crocodile"];
-      return db.saveBallot('qwerty', ballot);
+      const ballots = [
+        ["Alligator", "Caiman", "Crocodile"],
+        ["Caiman", "Alligator", "Crocodile"],
+        ["Crocodile", "Alligator", "Caiman"],
+      ];
+      return Promise.all(ballots.map(ballot => {
+        return db.saveBallot('qwerty', ballot);
+      }));
     });
 };
