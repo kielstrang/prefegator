@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="26.821693mm"
+   height="40.108097mm"
+   viewBox="0 0 26.821693 40.108097"
+   version="1.1"
+   id="svg28"
+   sodipodi:docname="alligator-bracket-reversed.svg"
+   inkscape:version="0.92.2 (unknown)">
+  <metadata
+     id="metadata34">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs32" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview30"
+     showgrid="false"
+     inkscape:zoom="1.5568344"
+     inkscape:cx="50.686665"
+     inkscape:cy="75.794829"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg28" />
+  <style
+     id="style2">
+    .gator {
+      fill: green;
+    }
+  </style>
+  <g
+     transform="matrix(-1,0,0,1,76.702006,-3.5115564)"
+     id="g26">
+    <g
+       id="g4799"
+       transform="translate(0,-40.142518)">
+      <g
+         id="g5139">
+        <g
+           transform="translate(-9.3920843,-0.50223314)"
+           id="g5059">
+          <g
+             id="g3887"
+             transform="matrix(4.0486076,0,0,4.0486076,-142.67339,-132.58192)">
+            <g
+               transform="matrix(1,0,0,1.7491352,0,-32.702802)"
+               id="text3701"
+               aria-label="&lt;">
+              <path
+                 id="path3703"
+                 class="gator"
+                 d="m 56.505223,44.594586 -5.333007,1.896525 5.333007,1.886189 v 0.940511 l -6.624918,-2.402954 v -0.857828 l 1.039298,-0.376968 2.879217,-1.044334 2.706403,-0.981652 z"
+                 inkscape:connector-curvature="0"
+                 style="fill:#008000" />
+            </g>
+          </g>
+          <path
+             id="rect4774"
+             class="gator"
+             d="m 67.394447,49.948374 c -2.014347,1.366842 0,0 -2.014347,1.366842 -0.497332,3.302355 0,0 -1.08144,6.795081 l 10.063908,-6.382968 c -6.968121,-1.778955 0,0 -6.968121,-1.778955 z"
+             inkscape:connector-curvature="0"
+             style="fill:#008000" />
+        </g>
+        <g
+           transform="matrix(4.0486076,0,0,7.0815621,-145.86838,-242.35984)"
+           id="text3701-7"
+           aria-label="&lt;">
+          <g
+             id="g3850-7"
+             transform="matrix(1,0,0,-1,9.9999997e-8,86.440806)">
+            <path
+               d="m 54.778945,45.042795 0.0058,-0.508997 -0.792342,0.231556 -0.195551,-0.06899 0.996727,-0.28326 0.178372,0.06291 0.0026,0.635746 z"
+               class="gator"
+               id="path3703-5-0"
+               inkscape:connector-curvature="0"
+               style="fill:#008000" />
+            <path
+               d="m 53.393199,44.556661 0.0058,-0.508997 -0.792342,0.231556 -0.195551,-0.06899 0.996727,-0.28326 0.178372,0.06291 0.0026,0.635746 z"
+               class="gator"
+               id="path3703-5-1-9"
+               inkscape:connector-curvature="0"
+               style="fill:#008000" />
+            <path
+               d="m 52.007447,44.063639 0.0058,-0.508997 -0.792342,0.231556 -0.195551,-0.06899 0.996727,-0.28326 0.178372,0.06291 0.0026,0.635746 z"
+               class="gator"
+               id="path3703-5-1-2-3"
+               inkscape:connector-curvature="0"
+               style="fill:#008000" />
+          </g>
+          <g
+             id="g3850">
+            <path
+               d="m 54.778945,45.042795 0.0058,-0.508997 -0.792342,0.231556 -0.195551,-0.06899 0.996727,-0.28326 0.178372,0.06291 0.0026,0.635746 z"
+               class="gator"
+               id="path3703-5"
+               inkscape:connector-curvature="0"
+               style="fill:#008000" />
+            <path
+               d="m 53.393199,44.556661 0.0058,-0.508997 -0.792342,0.231556 -0.195551,-0.06899 0.996727,-0.28326 0.178372,0.06291 0.0026,0.635746 z"
+               class="gator"
+               id="path3703-5-1"
+               inkscape:connector-curvature="0"
+               style="fill:#008000" />
+            <path
+               d="m 52.007447,44.063639 0.0058,-0.508997 -0.792342,0.231556 -0.195551,-0.06899 0.996727,-0.28326 0.178372,0.06291 0.0026,0.635746 z"
+               class="gator"
+               id="path3703-5-1-2"
+               inkscape:connector-curvature="0"
+               style="fill:#008000" />
+          </g>
+        </g>
+      </g>
+      <g
+         aria-label="&lt;"
+         id="text3701-8"
+         transform="matrix(0.6181412,0.97234438,-2.3310708,1.4819142,125.15267,-68.513907)" />
+      <g
+         transform="matrix(0.75994556,-0.39688193,0.39688193,0.75994556,6.831043,42.074967)"
+         id="g4723">
+        <ellipse
+           id="path3912"
+           cx="48.275558"
+           cy="40.454662"
+           style="fill:#9fff00;fill-opacity:1;stroke:#000000;stroke-width:0.34991938;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           rx="3.7417734"
+           ry="3.1404169" />
+        <ellipse
+           id="path3914"
+           cx="48.275558"
+           cy="40.454662"
+           rx="0.64000541"
+           ry="2.3887215"
+           style="stroke-width:0.31517929" />
+      </g>
+    </g>
+    <g
+       transform="matrix(-1,0,0,1,212.51089,24.64902)"
+       id="g4799-9-9">
+      <g
+         transform="matrix(4.0486075,0,0,4.0486075,-152.06547,-133.08415)"
+         id="g3887-2-3" />
+    </g>
+  </g>
+</svg>
