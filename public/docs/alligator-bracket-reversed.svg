@@ -50,10 +50,9 @@
      inkscape:window-y="24"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg28" />
-  <style
-     id="style2">
+  <style>
     .gator {
-      fill: green;
+      fill: #335a3c;
     }
   </style>
   <g
@@ -79,7 +78,7 @@
                  class="gator"
                  d="m 56.505223,44.594586 -5.333007,1.896525 5.333007,1.886189 v 0.940511 l -6.624918,-2.402954 v -0.857828 l 1.039298,-0.376968 2.879217,-1.044334 2.706403,-0.981652 z"
                  inkscape:connector-curvature="0"
-                 style="fill:#008000" />
+                  />
             </g>
           </g>
           <path
@@ -87,7 +86,7 @@
              class="gator"
              d="m 67.394447,49.948374 c -2.014347,1.366842 0,0 -2.014347,1.366842 -0.497332,3.302355 0,0 -1.08144,6.795081 l 10.063908,-6.382968 c -6.968121,-1.778955 0,0 -6.968121,-1.778955 z"
              inkscape:connector-curvature="0"
-             style="fill:#008000" />
+              />
         </g>
         <g
            transform="matrix(4.0486076,0,0,7.0815621,-145.86838,-242.35984)"
@@ -101,19 +100,19 @@
                class="gator"
                id="path3703-5-0"
                inkscape:connector-curvature="0"
-               style="fill:#008000" />
+                />
             <path
                d="m 53.393199,44.556661 0.0058,-0.508997 -0.792342,0.231556 -0.195551,-0.06899 0.996727,-0.28326 0.178372,0.06291 0.0026,0.635746 z"
                class="gator"
                id="path3703-5-1-9"
                inkscape:connector-curvature="0"
-               style="fill:#008000" />
+                />
             <path
                d="m 52.007447,44.063639 0.0058,-0.508997 -0.792342,0.231556 -0.195551,-0.06899 0.996727,-0.28326 0.178372,0.06291 0.0026,0.635746 z"
                class="gator"
                id="path3703-5-1-2-3"
                inkscape:connector-curvature="0"
-               style="fill:#008000" />
+                />
           </g>
           <g
              id="g3850">
@@ -122,19 +121,19 @@
                class="gator"
                id="path3703-5"
                inkscape:connector-curvature="0"
-               style="fill:#008000" />
+                />
             <path
                d="m 53.393199,44.556661 0.0058,-0.508997 -0.792342,0.231556 -0.195551,-0.06899 0.996727,-0.28326 0.178372,0.06291 0.0026,0.635746 z"
                class="gator"
                id="path3703-5-1"
                inkscape:connector-curvature="0"
-               style="fill:#008000" />
+                />
             <path
                d="m 52.007447,44.063639 0.0058,-0.508997 -0.792342,0.231556 -0.195551,-0.06899 0.996727,-0.28326 0.178372,0.06291 0.0026,0.635746 z"
                class="gator"
                id="path3703-5-1-2"
                inkscape:connector-curvature="0"
-               style="fill:#008000" />
+                />
           </g>
         </g>
       </g>

@@ -1,5 +1,5 @@
 // Main colors
-$color-primary: #4C6B2B;
+$color-primary: #84AC5B;
 $color-secondary: #F8FCFF;
 $color-bg: #4A7069;
 $color-shaded: #86CCBF;
@@ -59,13 +59,21 @@ body {
         margin: 5px 0;
         
         .winner {
-            background-color: $color-primary;
-            color: $color-secondary;
+            background-color: $color-hightlight;
         }
     }
     
     .fa {
         color: $color-primary;
+    }
+    
+    .rank-text {
+        color: $color-primary;
+        margin-top: -0.2rem;
+    }
+    
+    .voting-list {
+        background-color: $grey-background;
     }
 }
 
@@ -76,12 +84,10 @@ body {
     
     .navbar-brand{
         color: $color-secondary;
+        margin-right: 0;
     }
 }
 
-.footer {
-    color: $color-secondary;
-}
 
 // Fixes bug between jquery-ui sortable and bootstrap
 .ui-sortable-placeholder {
@@ -105,23 +111,7 @@ body {
     // box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
   }
 
-
-.calendar-text {
-    color: $color-primary;
-    margin-top: -0.2rem;
-}
-
-.winner {
-    background-color: $color-hightlight;
-}
-
-.voting-list {
-    background-color: $grey-background;
-}
-
-.gator {
-    fill: black;
-    height: 50px;
-    width: 50px;
-
+.footer{
+    max-height: 40px;
+    color: $color-secondary;
 }
