@@ -32,9 +32,7 @@ module.exports = (db) => {
   });
 
   router.post("/:id", (req, res, next) => {
-    const voterId = req.params.id;
-    req.session.voter_id = voterId;
-    console.log(req.body.ballot);
+    req.session.voter_id = req.params.id;
     const ballot = JSON.parse(req.body.ballot);
     db.saveBallot(req.params.id, ballot)
       .then(() => res.redirect(`/polls/${req.params.id}/results`))
