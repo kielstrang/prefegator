@@ -27,7 +27,6 @@ $(function() {
 
     $('.add-option-name').val('');
     $('.add-option-desc').val('');
-    $('.item-desc').hide();
   })
 
   
@@ -47,10 +46,6 @@ $(function() {
                          });
     });
 
-    // $('.list-group-item').each((i, item) => {
-    //   console.log($(item).find('.item-name').text());
-    // });
-
     $('<input>').attr('type', 'hidden')
     .attr('name', 'poll')
     .attr('value', JSON.stringify(poll))
@@ -65,13 +60,20 @@ $(function() {
 
 
    // Description toggle functionality
-   $('.item-desc').hide(); //This one might not be needed, should only live in #create-option-form
   $('ul').on('click', '.list-group-item', function(event) {
     $(event.currentTarget).find('small').slideToggle();
   });
 
-  $('ol').on('click', '.list-group-item', function(event) {
-    $(event.currentTarget).find('small').slideToggle();
+
+  $('ol').on('click touchstart', '.show-button', function(event) {
+    $(event.currentTarget).parent().parent().find('small').slideToggle();
   });
+
+  var currentUrl = window.location.href;
+  if (currentUrl.indexOf('polls') === currentUrl.length - 5) {
+    $('.item-desc').show();
+  } else {
+    $('.item-desc').hide();
+  }
 
 });
