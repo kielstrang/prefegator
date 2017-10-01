@@ -3,7 +3,7 @@ $color-primary: #84AC5B;
 $color-secondary: #F8FCFF;
 $color-bg: #4A7069;
 $color-shaded: #86CCBF;
-$color-hightlight: #d4edda;
+$color-highlight: #d4edda;
 $grey-background: #e9ecef;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -58,11 +58,11 @@ body {
         border-color: $color-primary;
         margin: 5px 0;
         
-        .winner {
-            background-color: $color-hightlight;
-        }
     }
     
+    .winner {
+        background-color: $color-highlight;
+    }
     .fa {
         color: $color-primary;
     }
