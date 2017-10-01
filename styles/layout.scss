@@ -6,79 +6,80 @@ $color-shaded: #86CCBF;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 // Results page
-@import "./results";
+// @import "./results";
 
 // Create page
 @media (min-width: 992px) {
     .container {
-      width: 750px;
-    }
-  }
-
-
-.links-section {
-    padding-top: 1rem;
-}
-
-.fa {
-    color: $color-primary;
-}
-
-// Fixes bug between jquery-ui sortable and bootstrap
-.ui-sortable-placeholder {
-    height: 50px;
-}
-
-.button-submit {
-    padding-bottom: 15px;
-    padding-top: 15px;
-}
-
-.starter-template {
-    padding: 3rem 1.5rem;
-    text-align: center;
-}
-
-.form-control {
-    border-radius: 0.5rem;
-}
-
-.list-group-item {
-    border-color: $color-primary;
-    margin: 5px 0;
-}
-
-.navbar {
-    background-color: $color-primary;
-    justify-content: center;
-    .navbar-brand{
-        color: $color-secondary;
+        width: 750px;
     }
 }
+
+body {
+    background-color: $color-bg;
     
+    textarea {
+        resize: none;
+    }
+}
+
+
 .container {
     background-color: $color-secondary;
     min-height: 100vh;
     padding-top: 75px;
     padding-bottom: 75px;
+    
+    .button-submit {
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    
+    .form-group {
+        justify-content: center;
+        
+        .form-control {
+            border-radius: 0.5rem;
+        }
+    }
+    
+    .jumbotron {
+        padding: 2rem 1rem;
+    }
+    
+    .links-section {
+        padding-top: 1rem;
+    }
+    
+    .list-group-item {
+        border-color: $color-primary;
+        margin: 5px 0;
+        
+        .winner {
+            background-color: $color-primary;
+            color: $color-secondary;
+        }
+    }
+    
+    .fa {
+        color: $color-primary;
+    }
 }
 
-.jumbotron {
-    padding: 2rem 1rem;
-}
-
-.form-group {
+.navbar {
+    background-color: $color-primary;
     justify-content: center;
-}
-
-body {
-    background-color: $color-bg;
-}
-
-textarea {
-    resize: none;
+    
+    .navbar-brand{
+        color: $color-secondary;
+    }
 }
 
 .footer {
     color: $color-secondary;
+}
+
+// Fixes bug between jquery-ui sortable and bootstrap
+.ui-sortable-placeholder {
+    height: 50px;
 }
