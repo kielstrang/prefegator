@@ -7,7 +7,7 @@ Having trouble deciding on what to do? Try Prefegator and let your friends help 
 Prefegator is a group decision maker app meant to streamline group decision making. Prefegator provides a simple UI to allow a user to quickly create a poll and set voting options. Once a poll has been created, the user will be provided two links, one to the voting page, and one to the results page. 
 
 ## Screenshots
-![Create poll](https://github.com/kielstrang/prefegator/blob/master/public/docs/Screenshot_20171002-094935.png?raw=true =250x)
+![Create poll](https://github.com/kielstrang/prefegator/blob/master/public/docs/Screenshot_20171002-094935.png =250x?raw=true)
 ![Create options](https://github.com/kielstrang/prefegator/blob/master/public/docs/Screenshot_20171002-095124.png?raw=true =250x)
 ![Links page](https://github.com/kielstrang/prefegator/blob/master/public/docs/Screenshot_20171002-095157.png?raw=true =250x)
 ![Voting page](https://github.com/kielstrang/prefegator/blob/master/public/docs/Screenshot_20171002-095320.png?raw=true =250x)
