@@ -1,14 +1,22 @@
-# Node Skeleton
+## Preface
+Prefegator is a group project made by students at [Lighthouse Labs] (lighthouselabs.ca). It served to introduce the students to working on a team, how development in that environment might work, and further let them practice full-stack development.
 
-## Project Setup
+# Prefegator
+Having trouble deciding on what to do? Try Prefegator and let your friends help you.
 
-1. Create your own empty repo on GitHub
-2. Clone this repository (do not fork)
-  - Suggestion: When cloning, specify a different folder name that is relevant to your project
-3. Remove the git remote: `git remote rm origin`
-4. Add a remote for your origin: `git remote add origin <your github repo URL>`
-5. Push to the new origin: `git push -u origin master`
-6. Verify that the skeleton code now shows up in your repo on GitHub
+Prefegator is a group decision maker app meant to streamline group decision making. Prefegator provides a simple UI to allow a user to quickly create a poll and set voting options. Once a poll has been created, the user will be provided two links, one to the voting page, and one to the results page. 
+
+## Screenshots
+![Create poll](https://github.com/kielstrang/prefegator/blob/master/public/docs/createpage1.png?raw=true)
+![Create options](https://github.com/kielstrang/prefegator/blob/master/public/docs/createoptions.png?raw=true)
+![Links page](https://github.com/kielstrang/prefegator/blob/master/public/docs/linkspage.png?raw=true)
+![Voting page](https://github.com/kielstrang/prefegator/blob/master/public/docs/votepage.png?raw=true)
+![Results page](https://github.com/kielstrang/prefegator/blob/master/public/docs/resultspage.png?raw=true)
+
+## Prefegator v1.0 Features:
+Prefegator uses [Instant-runoff voting](https://en.wikipedia.org/wiki/Instant-runoff_voting) in its current version. An alpha version ran on [Borda counting](https://en.wikipedia.org/wiki/Borda_count). A later version of Prefegator might offer an option for a user to choose which voting system to use.
+
+The user must enter an email, a poll name and at least two choices. They can optionally set a description for the poll or for individual choices, or require voters to enter their name to cast their vote.
 
 ## Getting Started
 
@@ -27,3 +35,18 @@
 
 - Node 5.10.x or above
 - NPM 3.8.x or above
+- body-parser: ^1.15.2,
+- bootstrap: ^4.0.0-beta,
+- cookie-session: ^1.3.2,
+- dotenv: ^2.0.0,
+- ejs: ^2.4.1,
+- express: ^4.13.4,
+- jquery: ^3.2.1,
+- knex: ^0.11.7,
+- knex-logger: ^0.1.0,
+- mailgun-js: ^0.13.1,
+- morgan: ^1.7.0,
+- node-sass-middleware: ^0.9.8,
+- pg: ^6.0.2,
+- popper.js: ^1.12.5,
+- sweetalert: ^2.0.4
