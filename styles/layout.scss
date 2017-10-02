@@ -46,6 +46,10 @@ body {
     .jumbotron {
         padding: 1rem 1rem;
         margin-bottom: 1rem;
+        
+        .list-group-item {
+            border-color: #e9ecef;
+        }
     }
     
     .links-section {

@@ -20,7 +20,21 @@
         <p class="pt-2">
           <%= poll.voteCount %> total voters.  Results calculated using <a href="https://en.wikipedia.org/wiki/Instant-runoff_voting">Instant Runoff Voting</a>
         </p>
+        <small class="text-left">See who voted: <i class="fa fa-caret-square-o-down"></i></small>
+<div class="row justify-content-center">
+<div class="col-6">
+              <ul class="list-group rounded">
+                  <li class="list-group-item p-0 m-0">Cras justo odio</li>
+                  <li class="list-group-item p-0 m-0">Dapibus ac facilisis in</li>
+                  <li class="list-group-item p-0 m-0">Morbi leo risus</li>
+                  <li class="list-group-item p-0 m-0">Porta ac consectetur ac</li>
+                  <li class="list-group-item p-0 m-0">Vestibulum at eros</li>
+                </ul>
+</div>
+</div>
       </div>
+
+
       <ul class="list-group">
         <div class="list-group">
           <% poll.options.forEach(function(option, index)  { %>
