@@ -18,20 +18,24 @@
           <%= poll.desc %>
         </p>
         <p class="pt-2">
-          <%= poll.voters.length %> total voters.  Results calculated using <a href="https://en.wikipedia.org/wiki/Instant-runoff_voting">Instant Runoff Voting</a>
+          <%= poll.voters.length %> total voters. Results calculated using <a href="https://en.wikipedia.org/wiki/Instant-runoff_voting">Instant Runoff Voting</a>
         </p>
-        <small class="text-left">See who voted: <i class="fa fa-caret-square-o-down"></i></small>
-<div class="row justify-content-center">
-<div class="col-6">
-              <ul class="list-group rounded">
-                  <li class="list-group-item p-0 m-0">Cras justo odio</li>
-                  <li class="list-group-item p-0 m-0">Dapibus ac facilisis in</li>
-                  <li class="list-group-item p-0 m-0">Morbi leo risus</li>
-                  <li class="list-group-item p-0 m-0">Porta ac consectetur ac</li>
-                  <li class="list-group-item p-0 m-0">Vestibulum at eros</li>
-                </ul>
-</div>
-</div>
+        <% if (!poll.voters === '') { %>
+        <small id="voters" class="text-left">See who voted: <i class="fa fa-caret-square-o-down"></i></small>
+        <div class="row justify-content-center voters-list">
+          <div class="col-6">
+            <ul class="list-group rounded">
+                <% poll.voters.forEach(function(voter) { %>
+                  <li class="list-group-item p-0 m-0">
+                    <%= voter %>
+                  </li>
+                  <% }) %>
+                  <% } %>
+          
+
+            </ul>
+          </div>
+        </div>
       </div>
 
 
