@@ -1,3 +1,3 @@
 $(function() {
-     $('.item-desc').first().show();
-})
+  $('.item-desc').first().show();
+});
