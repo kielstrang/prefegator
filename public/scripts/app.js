@@ -11,21 +11,21 @@ $(function() {
     if($optionNameLength === "") {
       swal({
         title: 'Chomp!',
-        text: 'You need to add an Option Name',
+        text: 'You need to add an Option Name.',
         icon: 'warning'
       });
       return;
     } if($optionNameLength.length > 50) {
       swal({
         title: 'Chomp!',
-        text: 'Name too long, please make it shorter',
+        text: 'Name too long, please make it shorter.',
         icon: 'warning'
       });
       return;
     } if($optionDescLength.length > 150) {
       swal({
         title: 'Chomp!',
-        text: 'Description too long, please make it shorter',
+        text: 'Description too long, please make it shorter.',
         icon: 'warning'
       });
       return;
@@ -62,7 +62,7 @@ $(function() {
     if($emailLength === "") {
       swal({
         title: 'Chomp!',
-        text: 'Please enter your email before submitting',
+        text: 'Please enter your email before submitting.',
         icon: 'warning'
       });
       event.preventDefault();
@@ -70,7 +70,7 @@ $(function() {
     } if($namelength === "") {
       swal({
         title: 'Chomp!',
-        text: 'You need to add a Poll Name',
+        text: 'You need to add a Poll Name.',
         icon: 'warning'
       });
       event.preventDefault();
@@ -78,7 +78,7 @@ $(function() {
     } if($namelength.length > 50) {
       swal({
         title: 'Chomp!',
-        text: 'Your Poll Name is too long',
+        text: 'Your Poll Name is too long.',
         icon: 'warning'
       });
       event.preventDefault();
@@ -86,7 +86,7 @@ $(function() {
     } if($descLength.length > 150) {
       swal({
         title: 'Chomp!',
-        text: 'Poll Description too long, please make it shorter',
+        text: 'Poll Description too long, please make it shorter.',
         icon: 'warning'
       });
       event.preventDefault();
@@ -94,7 +94,7 @@ $(function() {
     } if($('.list-group-item').length < 3) {
       swal({
         title: 'Chomp!',
-        text: 'Please add at least two options',
+        text: 'Please add at least two options.',
         icon: 'warning'
       });
       event.preventDefault();

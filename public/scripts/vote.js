@@ -7,7 +7,7 @@ $(function() {
       if ($voterName === '') {
         swal({
           title: 'Chomp!',
-          text:  'You need to provide a name/alias/callsign',
+          text:  'Please enter a name.',
           icon:  'warning'
         });
         event.preventDefault();
