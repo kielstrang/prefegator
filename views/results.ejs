@@ -21,21 +21,21 @@
           <%= poll.voteCount %> total voters. Results calculated using <a href="https://en.wikipedia.org/wiki/Instant-runoff_voting">Instant Runoff Voting</a>
         </p>
         <% if (poll.voters.length > 0) { %>
-        <small id="voters" class="text-left">See who voted: <i class="fa fa-caret-square-o-down"></i></small>
-        <div class="row justify-content-center voters-list">
-          <div class="col-6">
-            <ul class="list-group rounded">
+          <small id="voters" class="text-left">See who voted: <i class="fa fa-caret-square-o-down"></i></small>
+          <div class="row justify-content-center voters-list">
+            <div class="col-6">
+              <ul class="list-group rounded">
                 <% poll.voters.forEach(function(voter) { %>
                   <li class="list-group-item p-0 m-0">
                     <%= voter %>
                   </li>
                   <% }) %>
-                  
-                  
-                </ul>
-              </div>
+
+
+              </ul>
             </div>
-            <% } %>
+          </div>
+          <% } %>
       </div>
 
 
