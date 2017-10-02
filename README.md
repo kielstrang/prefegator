@@ -1,4 +1,4 @@
-##Preface
+## Preface
 Prefegator is a group project made by students at [Lighthouse Labs] (lighthouselabs.ca). It served to introduce the students to working on a team, how development in that environment might work, and further let them practice full-stack development.
 
 # Prefegator
@@ -6,20 +6,17 @@ Having trouble deciding on what to do? Try Prefegator and let your friends help 
 
 Prefegator is a group decision maker app meant to streamline group decision making. Prefegator provides a simple UI to allow a user to quickly create a poll and set voting options. Once a poll has been created, the user will be provided two links, one to the voting page, and one to the results page. 
 
+## Screenshots
+![Create poll](https://github.com/kielstrang/prefegator/blob/master/public/docs/Screenshot_20171002-094935.png?raw=true)
+![Create options](https://github.com/kielstrang/prefegator/blob/master/public/docs/Screenshot_20171002-095124.png?raw=true)
+![Links page](https://github.com/kielstrang/prefegator/blob/master/public/docs/Screenshot_20171002-095157.png?raw=true)
+![Voting page](https://github.com/kielstrang/prefegator/blob/master/public/docs/Screenshot_20171002-095320.png?raw=true)
+![Results page](https://github.com/kielstrang/prefegator/blob/master/public/docs/Screenshot_20171002-095347.png?raw=true)
+
 ## Prefegator v1.0 Features:
 Prefegator uses [Instant-runoff voting ](https://en.wikipedia.org/wiki/Instant-runoff_voting) in its current version. An alpha version ran on [Borda counting] (https://en.wikipedia.org/wiki/Borda_count). A later version of Prefegator might offer an option for a user to choose which voting system to use.
 
 The user must enter an email, a poll name and at least two choices. They can optionally set a description for the poll or for individual choices, or require voters to enter their name to cast their vote.
-
-## Project Setup
-
-1. Create your own empty repo on GitHub
-2. Clone this repository (do not fork)
-  - Suggestion: When cloning, specify a different folder name that is relevant to your project
-3. Remove the git remote: `git remote rm origin`
-4. Add a remote for your origin: `git remote add origin <your github repo URL>`
-5. Push to the new origin: `git push -u origin master`
-6. Verify that the skeleton code now shows up in your repo on GitHub
 
 ## Getting Started
 
