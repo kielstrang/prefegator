@@ -8,25 +8,25 @@ $(function() {
     var $optionNameLength = $('.add-option-name').val();
     var $optionDescLength = $('.add-option-desc').val();
 
-    if ($optionNameLength === "") {
+    if($optionNameLength === "") {
       swal({
         title: 'Chomp!',
-        text:  'You need to add an Option Name',
-        icon:  'warning'
+        text: 'You need to add an Option Name',
+        icon: 'warning'
       });
       return;
-    } if ($optionNameLength.length > 50) {
+    } if($optionNameLength.length > 50) {
       swal({
         title: 'Chomp!',
-        text:  'Name too long, please make it shorter',
-        icon:  'warning'
+        text: 'Name too long, please make it shorter',
+        icon: 'warning'
       });
       return;
-    } if ($optionDescLength.length > 150) {
-      swal ({
+    } if($optionDescLength.length > 150) {
+      swal({
         title: 'Chomp!',
-        text:  'Description too long, please make it shorter',
-        icon:  'warning'
+        text: 'Description too long, please make it shorter',
+        icon: 'warning'
       });
       return;
     } else {
@@ -52,84 +52,85 @@ $(function() {
       $('.add-option-name').val('');
       $('.add-option-desc').val('');
     }
-  })
+  });
 
   // Submit poll to database
   $('#create-poll-form').on('submit', function(event) {
     var $namelength = $('#poll-name').val();
     var $emailLength = $('#email').val();
     var $descLength = $('#poll-desc').val();
-    if ($emailLength === "") {
-    swal({
-      title: 'Chomp!',
-      text:  'Please enter your email before submitting',
-      icon:  'warning'
-    });
-    event.preventDefault();
-    return;
-    } if ($namelength === "") {
+    if($emailLength === "") {
       swal({
         title: 'Chomp!',
-        text:  'You need to add a Poll Name',
-        icon:  'warning'
+        text: 'Please enter your email before submitting',
+        icon: 'warning'
       });
       event.preventDefault();
       return;
-    } if ($namelength.length > 50) {
+    } if($namelength === "") {
       swal({
         title: 'Chomp!',
-        text:  'Your Poll Name is too long',
-        icon:  'warning'
+        text: 'You need to add a Poll Name',
+        icon: 'warning'
       });
       event.preventDefault();
       return;
-    } if ($descLength.length > 150) {
-      swal({
-          title: 'Chomp!',
-          text:  'Poll Description too long, please make it shorter',
-          icon:  'warning'
-        });
-        event.preventDefault();
-        return;                 
-    } if ($('.list-group-item').length < 3) {
+    } if($namelength.length > 50) {
       swal({
         title: 'Chomp!',
-        text:  'Please add at least two options',
-        icon:  'warning'
+        text: 'Your Poll Name is too long',
+        icon: 'warning'
+      });
+      event.preventDefault();
+      return;
+    } if($descLength.length > 150) {
+      swal({
+        title: 'Chomp!',
+        text: 'Poll Description too long, please make it shorter',
+        icon: 'warning'
+      });
+      event.preventDefault();
+      return;
+    } if($('.list-group-item').length < 3) {
+      swal({
+        title: 'Chomp!',
+        text: 'Please add at least two options',
+        icon: 'warning'
       });
       event.preventDefault();
       return;
     } else {
-        var poll = {
-          name: $('#poll-name').val(),
-          email: $('#email').val(),
-          desc: $('#poll-desc').val(),
-          require_name: $('#voterCheckBox').is(':checked'),
-          options: []
-        };
-        
-        $('.list-option').each((i, item) => {
-          poll.options.push({ name: $(item).find('.item-name').text(),
-                              desc: $(item).find('.item-desc').text()
-                            });
-        });
+      var poll = {
+        name: $('#poll-name').val(),
+        email: $('#email').val(),
+        desc: $('#poll-desc').val(),
+        require_name: $('#voterCheckBox').is(':checked'),
+        options: []
+      };
 
-        $('<input>').attr('type', 'hidden')
+      $('.list-option').each((i, item) => {
+        poll.options.push({
+          name: $(item).find('.item-name').text(),
+          desc: $(item).find('.item-desc').text()
+        });
+      });
+
+      $('<input>').attr('type', 'hidden')
         .attr('name', 'poll')
         .attr('value', JSON.stringify(poll))
         .appendTo($('#create-poll-form'));
-        return true;
+      return true;
 
     }
   });
-  
+
   // Delete button for options on create page
   $('ul').on('mouseup', '.delete-option', function(event) {
     $(event.currentTarget).closest('li').remove();
-   })
+  });
 
 
-   // Description toggle create page
+  // Description toggle create page
   $('ul').on('mouseup', '.list-group-item', function(event) {
     $(event.currentTarget).find('small').slideToggle();
   });
@@ -141,7 +142,7 @@ $(function() {
 
   // Item description default status conditional
   var currentUrl = window.location.href;
-  if (currentUrl.indexOf('polls') === currentUrl.length - 5) {
+  if(currentUrl.indexOf('polls') === currentUrl.length - 5) {
     $('.item-desc').show();
   } else {
     $('.item-desc').hide();
