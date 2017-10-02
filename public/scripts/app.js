@@ -1,5 +1,4 @@
 $(function() {
-  // sessionStorage.clear();
   $('.add-option').on('click', function() {
     $('#create-option-form').submit();
   });
@@ -11,23 +10,23 @@ $(function() {
 
     if ($optionNameLength === "") {
       swal({
-        title: 'Sorry!',
+        title: 'Chomp!',
         text:  'You need to add an Option Name',
-        icon:  'error'
+        icon:  'warning'
       });
       return;
     } if ($optionNameLength.length > 50) {
       swal({
-        title: 'Sorry!',
+        title: 'Chomp!',
         text:  'Name too long, please make it shorter',
-        icon:  'error'
+        icon:  'warning'
       });
       return;
     } if ($optionDescLength.length > 150) {
       swal ({
-        title: 'Sorry!',
+        title: 'Chomp!',
         text:  'Description too long, please make it shorter',
-        icon:  'error'
+        icon:  'warning'
       });
       return;
     } else {
@@ -55,40 +54,51 @@ $(function() {
     }
   })
 
-  
   // Submit poll to database
   $('#create-poll-form').on('submit', function(event) {
     var $namelength = $('#poll-name').val();
     var $emailLength = $('#email').val();
     var $descLength = $('#poll-desc').val();
-    if ($namelength === "") {
+    if ($emailLength === "") {
+    swal({
+      title: 'Chomp!',
+      text:  'Please enter your email before submitting',
+      icon:  'warning'
+    });
+    event.preventDefault();
+    return;
+    } if ($namelength === "") {
       swal({
-        title: 'Sorry!',
-        text:  'You need to add a List Name',
-        icon:  'error'
+        title: 'Chomp!',
+        text:  'You need to add a Poll Name',
+        icon:  'warning'
       });
       event.preventDefault();
       return;
-    } if ($emailLength === "") {
+    } if ($namelength.length > 50) {
       swal({
-        title: 'Sorry!',
-        text:  'Please add an email before submitting',
-        icon:  'error'
+        title: 'Chomp!',
+        text:  'Your Poll Name is too long',
+        icon:  'warning'
       });
       event.preventDefault();
       return;
-    // } if ($namelength.length > 50) {
-      //     swal('Poll Name too long, please make it shorter');
-      //     return;
     } if ($descLength.length > 150) {
       swal({
-          title: 'Sorry!',
+          title: 'Chomp!',
           text:  'Poll Description too long, please make it shorter',
-          icon:  'error'
+          icon:  'warning'
         });
-        event.preventDefault(); //a return after seems redundant but 
-                                //phone requests somehow went through otherwise.
-        return;                 //will investigate on Sunday.
+        event.preventDefault();
+        return;                 
+    } if ($('.list-group-item').length < 3) {
+      swal({
+        title: 'Chomp!',
+        text:  'Please add at least two options',
+        icon:  'warning'
+      });
+      event.preventDefault();
+      return;
     } else {
         var poll = {
           name: $('#poll-name').val(),
@@ -114,18 +124,18 @@ $(function() {
   });
   
   // Delete button for options on create page
-  $('ul').on('click', '.delete-option', function(event) {
+  $('ul').on('mouseup', '.delete-option', function(event) {
     $(event.currentTarget).closest('li').remove();
    })
 
 
    // Description toggle create page
-  $('ul').on('click', '.list-group-item', function(event) {
+  $('ul').on('mouseup', '.list-group-item', function(event) {
     $(event.currentTarget).find('small').slideToggle();
   });
 
   // Description toggle on vote page
-  $('ol').on('click touchstart', '.show-button', function(event) {
+  $('ol').on('mouseup', '.show-button', function(event) {
     $(event.currentTarget).parent().parent().find('small').slideToggle();
   });
 
