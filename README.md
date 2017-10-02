@@ -7,14 +7,14 @@ Having trouble deciding on what to do? Try Prefegator and let your friends help 
 Prefegator is a group decision maker app meant to streamline group decision making. Prefegator provides a simple UI to allow a user to quickly create a poll and set voting options. Once a poll has been created, the user will be provided two links, one to the voting page, and one to the results page. 
 
 ## Screenshots
-![Create poll](https://github.com/kielstrang/prefegator/blob/master/public/docs/Screenshot_20171002-094935.png?raw=true)
-![Create options](https://github.com/kielstrang/prefegator/blob/master/public/docs/Screenshot_20171002-095124.png?raw=true =250x)
-![Links page](https://github.com/kielstrang/prefegator/blob/master/public/docs/Screenshot_20171002-095157.png?raw=true =250x)
-![Voting page](https://github.com/kielstrang/prefegator/blob/master/public/docs/Screenshot_20171002-095320.png?raw=true =250x)
-![Results page](https://github.com/kielstrang/prefegator/blob/master/public/docs/Screenshot_20171002-095347.png?raw=true =250x)
+![Create poll](https://github.com/kielstrang/prefegator/blob/master/public/docs/createpage1.png?raw=true)
+![Create options](https://github.com/kielstrang/prefegator/blob/master/public/docs/createoptions.png?raw=true)
+![Links page](https://github.com/kielstrang/prefegator/blob/master/public/docs/linkspage.png?raw=true)
+![Voting page]https://github.com/kielstrang/prefegator/blob/master/public/docs/votepage.png?raw=true)
+![Results page](https://github.com/kielstrang/prefegator/blob/master/public/docs/resultspage.png?raw=true)
 
 ## Prefegator v1.0 Features:
-Prefegator uses [Instant-runoff voting ](https://en.wikipedia.org/wiki/Instant-runoff_voting) in its current version. An alpha version ran on [Borda counting] (https://en.wikipedia.org/wiki/Borda_count). A later version of Prefegator might offer an option for a user to choose which voting system to use.
+Prefegator uses [Instant-runoff voting](https://en.wikipedia.org/wiki/Instant-runoff_voting) in its current version. An alpha version ran on [Borda counting](https://en.wikipedia.org/wiki/Borda_count). A later version of Prefegator might offer an option for a user to choose which voting system to use.
 
 The user must enter an email, a poll name and at least two choices. They can optionally set a description for the poll or for individual choices, or require voters to enter their name to cast their vote.
 
