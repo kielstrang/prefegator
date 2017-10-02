@@ -10,7 +10,7 @@ Prefegator is a group decision maker app meant to streamline group decision maki
 ![Create poll](https://github.com/kielstrang/prefegator/blob/master/public/docs/createpage1.png?raw=true)
 ![Create options](https://github.com/kielstrang/prefegator/blob/master/public/docs/createoptions.png?raw=true)
 ![Links page](https://github.com/kielstrang/prefegator/blob/master/public/docs/linkspage.png?raw=true)
-![Voting page]https://github.com/kielstrang/prefegator/blob/master/public/docs/votepage.png?raw=true)
+![Voting page](https://github.com/kielstrang/prefegator/blob/master/public/docs/votepage.png?raw=true)
 ![Results page](https://github.com/kielstrang/prefegator/blob/master/public/docs/resultspage.png?raw=true)
 
 ## Prefegator v1.0 Features:
