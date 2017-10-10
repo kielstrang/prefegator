@@ -1,5 +1,5 @@
 ## Preface
-Prefegator is a group project made by students at [Lighthouse Labs] (lighthouselabs.ca). It served to introduce the students to working on a team, how development in that environment might work, and further let them practice full-stack development.
+Prefegator is a group project made by students at [Lighthouse Labs](lighthouselabs.ca). It served to introduce the students to working on a team, how development in that environment might work, and further let them practice full-stack development.
 
 # Prefegator
 Having trouble deciding on what to do? Try Prefegator and let your friends help you.
@@ -21,8 +21,8 @@ The user must enter an email, a poll name and at least two choices. They can opt
 ## Getting Started
 
 1. Create the `.env` by using `.env.example` as a reference: `cp .env.example .env`
-2. Update the .env file with your correct local information
-3. Install dependencies: `npm i`
+2. Update the `.env` file with your correct local information
+3. Install dependencies: `npm install`
 4. Fix to binaries for sass: `npm rebuild node-sass`
 5. Run migrations: `npm run knex migrate:latest`
   - Check the migrations folder to see what gets created in the DB
@@ -35,18 +35,18 @@ The user must enter an email, a poll name and at least two choices. They can opt
 
 - Node 5.10.x or above
 - NPM 3.8.x or above
-- body-parser: ^1.15.2,
-- bootstrap: ^4.0.0-beta,
-- cookie-session: ^1.3.2,
-- dotenv: ^2.0.0,
-- ejs: ^2.4.1,
-- express: ^4.13.4,
-- jquery: ^3.2.1,
-- knex: ^0.11.7,
-- knex-logger: ^0.1.0,
-- mailgun-js: ^0.13.1,
-- morgan: ^1.7.0,
-- node-sass-middleware: ^0.9.8,
-- pg: ^6.0.2,
-- popper.js: ^1.12.5,
-- sweetalert: ^2.0.4
+- body-parser
+- bootstrap
+- cookie-session
+- dotenv
+- ejs
+- express
+- jquery
+- knex
+- knex-logger
+- mailgun-js
+- morgan
+- node-sass-middleware
+- pg
+- popper.js
+- sweetalert
